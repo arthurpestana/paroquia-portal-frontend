@@ -1,0 +1,56 @@
+@import '@/styles/variables.scss';
+
+.navItem__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .navItem__content__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 8px;
+        transition: ease-in-out 0.2s;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $background-primary;
+            transition: width 0.2s ease-in-out;
+            border-radius: 2px;
+        }
+
+        span {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            color: $text-light;
+        }
+
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+
+            span {
+                color: $text-light;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .navItem__content {
+        .navItem__content__link {
+            span {
+                font-size: 0.9rem;
+            }
+        }
+    }
+    
+}

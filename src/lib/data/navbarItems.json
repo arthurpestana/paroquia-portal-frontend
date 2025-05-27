@@ -1,0 +1,23 @@
+[
+  {
+    "label": "Home",
+    "href": "/home"
+  },
+  {
+    "label": "Sobre Nós",
+    "href": "/home#aboutUs"
+  },
+  {
+    "label": "Cronograma",
+    "href": "/home#timeline"
+  },
+  {
+    "label": "Localização",
+    "href": "/home#location"
+  },
+  {
+    "label": "Inscrições",
+    "href": "https://www.unitins.br/Eventos/Inscricao/2244",
+    "isButton": true
+  }
+]

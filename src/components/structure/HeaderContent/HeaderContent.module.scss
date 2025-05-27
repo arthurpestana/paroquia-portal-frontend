@@ -1,0 +1,29 @@
+@import "@/styles/variables.scss";
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-image: url('/images/banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 1040px) {
+    .header__content {
+        background-image: url('/images/banner2.png') !important;
+        background-size: cover;
+        background-clip: border-box;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header__content {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/images/banner2.png') !important;
+        background-size: cover;
+        background-clip: border-box;
+        background-position: left;
+    }
+}
