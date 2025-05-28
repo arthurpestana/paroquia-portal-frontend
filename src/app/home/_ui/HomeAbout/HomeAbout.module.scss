@@ -9,22 +9,12 @@
     gap: 32px;
     padding: 64px 64px;
 
-    .aboutUs__content__image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 16px;
-
-        img {
-            width: fit-content;
-        }
-    }
-
     .aboutUs__content__main {
-        width: 50%;
+        width: 80%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 16px;
 
         .aboutUs__content__main__text {
@@ -36,7 +26,6 @@
                 text-align: justify;
                 font-size: 1rem;
                 font-weight: 400;
-                text-align: justify;
                 color: $text-dark;
                 word-break: break-word;
                 overflow-wrap: break-word;
@@ -44,44 +33,26 @@
             }
         }
 
-        .aboutUs__content__main__eventsQuant {
+        .aboutUs__content__main__button {
+            width: 100%;
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 5px;
+        }
 
-            .aboutUs__content__main__eventsQuant__Count {
-                width: 32px;
-                height: 32px;
-                background-color: $foreground-primary;
-                border: 2px solid #FFFFFF;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                span {
-                    font-weight: 400;
-                    font-size: 1rem;
-                    color: $text-light;
-                }
-            }
+        .aboutUs__content__main__image{
+            max-width: 100%;
+            height: auto;
+            display: flex;
+            gap: 200px;
         }
     }
-
-
 }
 
 @media screen and (max-width: 1040px) {
     .aboutUs__content {
         padding: 64px 48px;
         gap: 24px;
-
-        .aboutUs__content__image {
-            img {
-                width: 380px;
-                height: 280px;
-            }
-        }
 
         .aboutUs__content__main {
             .aboutUs__content__main__text {
@@ -90,12 +61,6 @@
 
                 p {
                     font-size: 0.9rem;
-                }
-            }
-
-            .aboutUs__content__main__eventsQuant {
-                & span {
-                    font-size: 0.9rem !important;
                 }
             }
         }
@@ -107,13 +72,6 @@
         flex-direction: column;
         padding: 64px 16px 48px 16px;
         gap: 40px;
-
-        .aboutUs__content__image {
-            img {
-                width: 340px;
-                height: 240px;
-            }
-        }
 
         .aboutUs__content__main {
             width: 100%;
@@ -134,10 +92,6 @@
                     font-size: 0.9rem;
                 }
             }
-
-            .aboutUs__content__main__eventsQuant {
-                justify-content: center;
-            }
         }
     }
 }
@@ -147,14 +101,6 @@
         padding: 64px 16px 32px 16px;
         gap: 24px;
 
-        .aboutUs__content__image {
-            img {
-                width: 100%;
-                height: auto;
-                max-width: 100%;
-            }
-        }
-
         .aboutUs__content__main {
             width: 100%;
             gap: 12px;
@@ -163,17 +109,6 @@
                 p {
                     text-align: justify;
                     font-size: 14px;
-                }
-            }
-
-            .aboutUs__content__main__eventsQuant {
-                margin-top: 8px;
-                justify-content: center;
-
-                .aboutUs__content__main__eventsQuant {
-                    & span {
-                        font-size: 0.9rem !important;
-                    }
                 }
             }
         }

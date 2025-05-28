@@ -5,18 +5,18 @@
   },
   {
     "label": "Sobre Nós",
-    "href": "/home#aboutUs"
+    "href": "/home"
   },
   {
-    "label": "Cronograma",
-    "href": "/home#timeline"
+    "label": "Novidades",
+    "href": "/home"
   },
   {
-    "label": "Localização",
-    "href": "/home#location"
+    "label": "Blog",
+    "href": "/home"
   },
   {
-    "label": "Inscrições",
+    "label": "Contate-nos",
     "href": "https://www.unitins.br/Eventos/Inscricao/2244",
     "isButton": true
   }

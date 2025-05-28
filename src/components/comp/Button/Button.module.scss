@@ -96,7 +96,7 @@
         font-size: 1rem;
         font-weight: 400;
         text-align: center;
-        color: $text-light;
+        color: $text-primary;
     }
 
     &:hover {
@@ -107,7 +107,7 @@
         background-color: $background-secondary;
 
         span {
-            color: $text-primary;
+            color: $foreground-primary;
         }
 
         &:hover {

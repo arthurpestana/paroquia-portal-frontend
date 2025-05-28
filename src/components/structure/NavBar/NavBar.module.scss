@@ -5,12 +5,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px 64px;
-  background: linear-gradient(to bottom,
-      $foreground-primary 10%,
-      transparent);
+  background-color: #000000;
   position: relative;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 
   .navBar__content__logo {
     display: flex;

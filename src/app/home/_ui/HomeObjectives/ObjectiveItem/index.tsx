@@ -1,9 +1,6 @@
 import React from "react";
 import styles from "./ObjectiveItem.module.scss";
-import ForumIcon from '@mui/icons-material/Forum';
-import SchoolIcon from '@mui/icons-material/School';
-import CollectionsIcon from '@mui/icons-material/Collections';
-import GroupsIcon from '@mui/icons-material/Groups';
+import ChurchIcon from '@mui/icons-material/Church';
 
 type ObjectiveItemProps = {
     icon?: string;
@@ -12,10 +9,7 @@ type ObjectiveItemProps = {
 };
 
 const iconMap: Record<string, React.ReactNode> = {
-    Forum: <ForumIcon />,
-    School: <SchoolIcon />,
-    Collections: <CollectionsIcon />,
-    Groups: <GroupsIcon />,
+    Church: <ChurchIcon />
 };
 
 

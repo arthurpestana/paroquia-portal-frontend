@@ -7,13 +7,13 @@ type ButtonProps = {
     label?: string;
     icon?: React.ReactNode;
     iconPosition?: 'left' | 'right';
-    onClick: () => void;
+    onClick?: () => void;
     disabled?: boolean;
     variant?: 'text' | 'outlined' | 'contained';
     darkMode?: boolean;
 }
 
-export const Button = ({ label, icon, iconPosition = 'right', onClick, disabled, variant = 'contained', darkMode = false, }: ButtonProps) => {
+export const Button = ({ label, icon, iconPosition = 'right', onClick, disabled, variant = 'contained', darkMode = false}: ButtonProps) => {
     const variantClass = styles[`button__content__${variant}`];
     const iconClass = !label && icon ? styles[`button__content__onlyIcon`] : '';
     const darkClass = darkMode ? styles['dark'] : '';

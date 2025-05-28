@@ -17,9 +17,8 @@ export const HomeBanner = () => {
                 <div className={styles.banner__content__main__button}>
                     <Button 
                         variant='contained'
-                        label='Inscreva-se'
-                        onClick={() => window.open(HomeInfo.link, '_blank', 'noopener, noreferrer')}
-                        darkMode={true}
+                        label='Saiba Mais'
+                        darkMode={false}
                     />
                 </div>
             </div>

@@ -18,7 +18,7 @@ export const NavBar = () => {
     <nav className={styles.navBar__content}>
       <div className={styles.navBar__content__logo} onClick={() => router.push('/home')}>
         <Image
-          src="/images/logo.png"
+          src="/images/logo-paroquia.png"
           alt="Logo"
           width={80}
           height={80}
@@ -39,8 +39,8 @@ export const NavBar = () => {
                   setIsOpenNav(false);
                   window.open(item.href, "_blank", "noreferrer noopener");
                 }}
-                variant="outlined"
-                darkMode={true}
+                variant="contained"
+                darkMode={false}
               />
             );
           }

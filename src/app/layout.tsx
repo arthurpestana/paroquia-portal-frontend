@@ -9,8 +9,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "3º Tec Inclusão - Unitins",
-  description: "Evento de Inclusão Digital",
+  title: "Paróquia Nossa Senhora do Carmo",
+  description: "Exposição de eventos da paróquia",
   icons: {
     icon: '/favicon.ico',
   },
