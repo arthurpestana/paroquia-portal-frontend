@@ -1,21 +1,15 @@
 {
     "title": "Sobre nós",
-    "description": "Tec Inclusão (Unitins) é o evento que conecta tecnologia e acessibilidade, inspirado na ODS 11. Em um único dia você verá palestras rápidas, demos de protótipos inclusivos e networking com gente apaixonada por cidades mais justas e sustentáveis. Venha, compartilhe suas ideias e ajude a construir soluções que façam diferença!", 
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", 
     "images": [
         {
-            "src": "/images/logo-paroquia.png",
-            "heigth": "300",
-            "margin": "0"
+            "src": "/images/img-valor-2.png"
         },
         {
-            "src": "/images/logo-paroquia.png",
-            "heigth": "400",
-            "margin": "50px"
+            "src": "/images/img-valor-1.png"
         },
         {
-            "src": "/images/logo-paroquia.png",
-            "heigth": "300",
-            "margin": "0"
+            "src": "/images/img-valor-3.png"
         }
     ]
 }

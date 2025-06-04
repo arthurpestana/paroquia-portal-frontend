@@ -26,15 +26,30 @@ export const HomeAbout = () => {
                 </div>
                 <div className={styles.aboutUs__content__main__image}>
                     {aboutUs.images.map((img, idx) => (
-                        <Image 
-                            src={img.src} 
-                            key={idx} 
-                            alt='Image' 
-                            width={250} 
-                            height={Number(img.heigth)}
-                            style={{marginTop: img.margin}}
-                        />
+                        <div className={styles.aboutUs__content__main__image__item} key={idx}>
+                            <Image 
+                                src={img.src}
+                                fill
+                                style={{objectFit: 'cover'}}
+                                alt='Image'
+                            />
+                        </div>
                     ))}
+                </div>
+                <SectionTitle
+                    title='Comemore Conosco'
+                    subtitle='Nossa Missão e Visão'
+                    align='center'
+                />
+                <div className={styles.aboutUs__content__main__text}>
+                    <p className={styles.aboutUs__content__main__text__second}>{aboutUs.description}</p>
+                </div>
+                <div className={styles.aboutUs__content__main__button}>
+                    <Button
+                        label='Leia Mais'
+                        variant='outlined'
+                        darkMode={false}
+                    />
                 </div>
             </div>
         </div>

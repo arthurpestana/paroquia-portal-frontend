@@ -23,13 +23,17 @@
             line-height: 1.5;
 
             p {
-                text-align: justify;
+                text-align: center;
                 font-size: 1rem;
                 font-weight: 400;
                 color: $text-dark;
                 word-break: break-word;
                 overflow-wrap: break-word;
                 max-width: 100%;
+            }
+
+            .aboutUs__content__main__text__second{
+                font-size: 0.8rem;
             }
         }
 
@@ -41,10 +45,28 @@
         }
 
         .aboutUs__content__main__image{
-            max-width: 100%;
+            width: 100%;
             height: auto;
             display: flex;
-            gap: 200px;
+            justify-content: space-around;
+            gap: 50px;
+
+            .aboutUs__content__main__image__item{
+                position: relative;
+                width: 350px;
+                height: 350px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 25px;
+                overflow: hidden;
+            }
+
+            >:nth-child(2){
+                margin-top: 50px;
+                width: 350px;
+                height: 450px;
+            }
         }
     }
 }
