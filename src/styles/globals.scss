@@ -1,5 +1,20 @@
-@import './variables.scss';
+@use './variables.scss' as *;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.MuiSvgIcon-root {
+  all: unset !important;
+  width: 20px !important;
+  height: 20px !important;
+  fill: none !important;
+  transition: ease-in-out 0.1s !important;
+}
+
+.Toastify__toast {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: $dark-80;
+}
 
 * {
   box-sizing: border-box;
@@ -7,6 +22,7 @@
   margin: 0;
   scrollbar-width: thin;
   scrollbar-color: $foreground-primary transparent;
+  font-family: "Poppins", sans-serif;
 }
 
 *::-webkit-scrollbar {
@@ -38,7 +54,7 @@ body {
 body {
   background-color: $background-primary;
   color: $text-dark;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

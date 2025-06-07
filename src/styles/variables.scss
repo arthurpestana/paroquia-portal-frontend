@@ -1,8 +1,8 @@
 //GRAYSCALE
-$dark-100: #16151c;
-$dark-90: #16151cc4;
-$dark-80: #16151c80;
-$dark-20: #16151c20;
+$dark-100: #1c1b15;
+$dark-90: #1c1b15c4;
+$dark-80: #1c1b1580;
+$dark-20: #1c1b1520;
 
 $gray-100: #a2a1a8;
 $gray-80: #a2a1a880;
@@ -19,7 +19,7 @@ $light-80: #d9e1e180;
 $light-20: #d9e1e120;
 $light-10: #d9e1e110;
 $light-5: #d9e1e105;
-
+ 
 //UTILS - COLORS
 $dark-yellow-100: #a48925;
 $yellow-100: #efbe12;
@@ -33,27 +33,27 @@ $red-80: #f45b6980;
 $red-5: #f45b6905;
 
 //TOKENS - BACKGROUNDS
-$background-primary: #F8F6FF;
-$background-secondary: #1C1D28;
+$background-primary: #f9f9f9;
+$background-secondary: #1c1b15;
 
 //TOKENS - FOREGROUNDS
 $foreground-primary: #FFD2A4;
 $foreground-secondary: #FFF5EB;
 
 //TOKENS - BRAND COLORS
-$brand-primary-5: #23195A0D;
-$brand-primary-10: #23195A1A;
-$brand-primary-20: #23195A33;
-$brand-primary: #23195A;
-$brand-secondary: #463285;
-$brand-tirth: #6b5db0;
-$brand-fourth: #100c29;
+$brand-primary-5: #4B413D05;
+$brand-primary-10: #4B413D10;
+$brand-primary-20: #4B413D20;
+$brand-primary: #4B413D;
+$brand-secondary: #DC9853;
+$brand-tirth: #A54E2B;
+$brand-fourth: #FFD2A4;
 $brand-fifth: #1a153d;
 
 //TOKENS - TEXT COLORS
 $text-title: $brand-fifth;
 
-$text-primary: $dark-100;
+$text-primary: $brand-primary;
 $text-secondary: $brand-tirth;
 $text-light: $light-100;
 $text-dark: $dark-100;
@@ -68,7 +68,7 @@ $font-light: 300;
 $font-size-xxs: 0.5rem;
 $font-size-xs: 0.75rem;
 $font-size-sm: 0.875rem;
-$font-size-md: 1rem;
+$font-size-md: 16px;
 $font-size-lg: 1.125rem;
 $font-size-xl: 1.25rem;
 $font-size-2xl: 1.5rem;

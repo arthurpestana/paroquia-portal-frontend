@@ -9,7 +9,7 @@ type HeaderContentProps = {
 export const HeaderContent = ({ children, height, style }: HeaderContentProps) => {
     return (
         <header
-            className={styles.header__content}
+            className={styles.header_content}
             style={{ height: height, ...style }}
         >
             {children}

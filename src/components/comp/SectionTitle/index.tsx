@@ -15,7 +15,7 @@ const TextAlingMap = new Map<SectionTitleProps['align'], 'left' | 'center' | 'ri
 
 export const SectionTitle = ({ title, subtitle, align = 'center' }: SectionTitleProps) => {
     return (
-        <div className={styles.sectionTitle__content} style={{ alignItems: align, textAlign: align ? TextAlingMap.get(align): "justify" }}>
+        <div className={styles.sectionTitle_content} style={{ alignItems: align, textAlign: align ? TextAlingMap.get(align): "justify" }}>
             <h3>{subtitle}</h3>
             <h2>{title}</h2>
         </div>

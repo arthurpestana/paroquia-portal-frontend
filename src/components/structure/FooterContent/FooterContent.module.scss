@@ -1,6 +1,6 @@
-@import '@/styles/variables.scss';
+@use '@/styles/variables.scss' as *;
 
-.footer__content {
+.footer_content {
     display: flex;
     flex-direction: row;
     width: 100vw;
@@ -10,7 +10,7 @@
     padding: 32px 64px;
     gap: 32px;
 
-    .footer__content__logo {
+    .footer_content_logo {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -18,21 +18,21 @@
         gap: 8px;
 
         span {
-            font-size: 1rem;
+            font-size: 16px;
             font-weight: 400;
             text-align: center;
             color: $text-light;
         }
     }
 
-    .footer__content__nav {
+    .footer_content_nav {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 32px;
     }
 
-    .footer__content__socials {
+    .footer_content_socials {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -41,15 +41,15 @@
 }
 
 @media screen and (max-width: 1040px) {
-    .footer__content {
+    .footer_content {
         padding: 24px 48px;
         gap: 24px;
 
-        .footer__content__nav {
+        .footer_content_nav {
             gap: 24px;
         }
 
-        .footer__content__logo {
+        .footer_content_logo {
             img {
                 width: 80px;
                 height: 80px;
@@ -59,14 +59,14 @@
 }
 
 @media screen and (max-width: 768px) {
-    .footer__content {
+    .footer_content {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 24px;
         padding: 32px;
 
-        .footer__content__nav {
+        .footer_content_nav {
             flex-wrap: wrap;
             gap: 16px;
         }
@@ -74,11 +74,11 @@
 }
 
 @media screen and (max-width: 480px) {
-    .footer__content {
+    .footer_content {
         padding: 24px;
         gap: 16px;
 
-        .footer__content__logo {
+        .footer_content_logo {
             img {
                 width: 60px;
                 height: 60px;
@@ -89,13 +89,13 @@
             }
         }
 
-        .footer__content__nav {
+        .footer_content_nav {
             flex-direction: column;
             align-items: center;
             gap: 12px;
         }
 
-        .footer__content__socials {
+        .footer_content_socials {
             justify-content: center;
         }
     }

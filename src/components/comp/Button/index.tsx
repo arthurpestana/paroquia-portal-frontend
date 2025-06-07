@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './Button.module.scss';
 
 type ButtonProps = {
+    type?: 'button' | 'submit' | 'reset';
     label?: string;
     icon?: React.ReactNode;
     iconPosition?: 'left' | 'right';
@@ -13,7 +14,7 @@ type ButtonProps = {
     darkMode?: boolean;
 }
 
-export const Button = ({ label, icon, iconPosition = 'right', onClick, disabled, variant = 'contained', darkMode = false}: ButtonProps) => {
+export const Button = ({ type = 'button', label, icon, iconPosition = 'right', onClick, disabled, variant = 'contained', darkMode = false}: ButtonProps) => {
     const variantClass = styles[`button__content__${variant}`];
     const iconClass = !label && icon ? styles[`button__content__onlyIcon`] : '';
     const darkClass = darkMode ? styles['dark'] : '';
@@ -24,10 +25,11 @@ export const Button = ({ label, icon, iconPosition = 'right', onClick, disabled,
             style={{ flexDirection: iconPosition == 'left' ? 'row-reverse' : 'row' }}
             onClick={onClick}
             disabled={disabled}
+            type={type}
         >
-            <span className={styles.button__content__label}>
+            {label && <span className={styles.button__content__label}>
                 {label}
-            </span>
+            </span>}
             {icon && <span className={styles.button__content__icon}>
                 {icon}
             </span>}

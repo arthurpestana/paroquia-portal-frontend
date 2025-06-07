@@ -11,17 +11,17 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 export const FooterContent = () => {
     return (
-        <footer className={styles.footer__content}>
-            <div className={styles.footer__content__logo}>
+        <footer className={styles.footer_content}>
+            <div className={styles.footer_content_logo}>
                 <Image
                     src="/images/logo.png"
                     alt="Logo"
                     width={100}
                     height={100}
-                    className={styles.footer__content__logo__img}
+                    className={styles.footer_content_logo_img}
                 />
             </div>
-            <div className={styles.footer__content__nav}>
+            <div className={styles.footer_content_nav}>
                 {navbarItems.map((item: NavItemType) => {
                     if (item.isButton) {
                         return null
@@ -35,7 +35,7 @@ export const FooterContent = () => {
                     );
                 })}
             </div>
-            <div className={styles.footer__content__socials}>
+            <div className={styles.footer_content_socials}>
                 <Button
                     icon={<InstagramIcon />}
                     onClick={() => window.open("https://www.instagram.com/tec_inclusao/", "_blank", "noreferrer noopener")}

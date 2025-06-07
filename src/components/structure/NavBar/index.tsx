@@ -15,8 +15,8 @@ export const NavBar = () => {
   const [isOpenNav, setIsOpenNav] = useState(false);
 
   return (
-    <nav className={styles.navBar__content}>
-      <div className={styles.navBar__content__logo} onClick={() => router.push('/home')}>
+    <nav className={styles.navBar_content}>
+      <div className={styles.navBar_content_logo} onClick={() => router.push('/home')}>
         <Image
           src="/images/logo-paroquia.png"
           alt="Logo"
@@ -27,7 +27,7 @@ export const NavBar = () => {
       </div>
 
       <div
-        className={`${styles.navBar__content__items} ${isOpenNav && styles.active}`}
+        className={`${styles.navBar_content_items} ${isOpenNav && styles.active}`}
       >
         {navbarItems.map((item: NavItemType) => {
           if (item.isButton) {
@@ -55,7 +55,7 @@ export const NavBar = () => {
         })}
       </div>
 
-      <div className={`${styles.navBar__content__burger} ${isOpenNav && styles.active}`} onClick={() => setIsOpenNav(!isOpenNav)} >
+      <div className={`${styles.navBar_content_burger} ${isOpenNav && styles.active}`} onClick={() => setIsOpenNav(!isOpenNav)} >
         <span></span>
         <span></span>
         <span></span>

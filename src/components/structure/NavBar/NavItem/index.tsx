@@ -12,8 +12,8 @@ type NavItemProps = {
 
 export const NavItem = ({ href, label, onClick }: NavItemProps) => {
     return (
-        <div className={styles.navItem__content}>
-            <Link href={href} onClick={onClick} className={styles.navItem__content__link}>
+        <div className={styles.navItem_content}>
+            <Link href={href} onClick={onClick} className={styles.navItem_content_link}>
                 <span>{label}</span>
             </Link>
         </div>

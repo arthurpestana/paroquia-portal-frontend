@@ -1,0 +1,135 @@
+@use '@/styles/variables.scss' as *;
+
+.objectives_item {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 36px 24px;
+    border-radius: 16px;
+    background-color: $foreground-secondary;
+    box-shadow: 0 4px 8px $brand-primary-10;
+    transition: all 0.2s ease-in-out;
+    max-width: 300px;
+    min-height: 380px;
+
+    .objectives_item_header {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .objectives_item_header_icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            margin: auto;
+            border-radius: 50%;
+            background-color: $foreground-primary;
+            padding: 16px;
+
+            svg {
+                width: 48px;
+                height: 48px;
+                color: $background-secondary;
+            }
+        }
+    }
+
+    .objectives_item_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: $text-dark;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        span {
+            text-align: justify;
+            font-size: 16px;
+            font-weight: 400;
+            color: $text-dark;
+        }
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .objectives_item {
+        max-width: 280px;
+        min-height: 360px;
+        padding: 32px 20px;
+
+        .objectives_item_content {
+            h4 {
+                font-size: 1.2rem;
+            }
+
+            span {
+                font-size: 0.95rem;
+            }
+        }
+
+        .objectives_item_header {
+            .objectives_item_header_icon {
+                padding: 14px;
+
+                svg {
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .objectives_item {
+        max-width: 280px;
+        min-height: 330px;
+        padding: 28px 16px;
+
+        .objectives_item_content {
+            h4 {
+                font-size: 1.16px;
+            }
+
+            span {
+                text-align: center;
+                font-size: 0.9rem;
+            }
+        }
+
+        .objectives_item_header {
+            .objectives_item_header_icon {
+                padding: 12px;
+
+                svg {
+                    width: 38px;
+                    height: 38px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .objectives_item {
+        min-height: 300px;
+        padding: 24px 12px;
+
+        .objectives_item_content {
+            h4 {
+                font-size: 16px;
+            }
+
+            span {
+                font-size: 0.875rem;
+            }
+        }
+    }
+}

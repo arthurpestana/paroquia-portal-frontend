@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "@/styles/globals.scss";
 import { ScreenSizeProvider } from "@/context/ScreenSizeContext";
+import { ToastContainer } from 'react-toastify';
 
-const montserrat = Montserrat({
+const space = Poppins({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
@@ -23,8 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${montserrat.className}`}>
+      <body className={`${space.className}`}>
         <ScreenSizeProvider>
+          <ToastContainer/>
           {children}
         </ScreenSizeProvider>
       </body>

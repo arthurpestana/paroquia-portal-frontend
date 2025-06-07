@@ -1,0 +1,7 @@
+@use '@/styles/variables.scss' as *;
+
+.events_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

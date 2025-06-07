@@ -1,6 +1,6 @@
-@import "@/styles/variables.scss";
+@use '@/styles/variables.scss' as *;
 
-.header__content {
+.header_content {
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -12,7 +12,7 @@
 }
 
 @media screen and (max-width: 1040px) {
-    .header__content {
+    .header_content {
         background-image: url('/images/banner2.png') !important;
         background-size: cover;
         background-clip: border-box;
@@ -21,7 +21,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .header__content {
+    .header_content {
         background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/images/banner2.png') !important;
         background-size: cover;
         background-clip: border-box;

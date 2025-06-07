@@ -1,0 +1,7 @@
+@use '@/styles/variables.scss' as *;
+
+.home_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

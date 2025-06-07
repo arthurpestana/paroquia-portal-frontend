@@ -1,11 +1,11 @@
-@import '@/styles/variables.scss';
+@use '../../../../styles/variables.scss' as *;
 
-.navItem__content {
+.navItem_content {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    .navItem__content__link {
+    .navItem_content_link {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -45,8 +45,8 @@
 }
 
 @media screen and (max-width: 1040px) {
-    .navItem__content {
-        .navItem__content__link {
+    .navItem_content {
+        .navItem_content_link {
             span {
                 font-size: 0.9rem;
             }

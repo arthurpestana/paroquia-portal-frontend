@@ -5,7 +5,7 @@ export const MainContent = ({ children }: {
     children: React.ReactNode;
 }) => {
     return (
-        <main className={styles.main__content}>
+        <main className={styles.main_content}>
             {children}
         </main>
     )
