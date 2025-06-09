@@ -4,7 +4,7 @@ import "@/styles/globals.scss";
 import { ScreenSizeProvider } from "@/context/ScreenSizeContext";
 import { ToastContainer } from 'react-toastify';
 
-const space = Poppins({
+const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${space.className}`}>
+      <body className={`${poppins.className}`}>
         <ScreenSizeProvider>
           <ToastContainer/>
           {children}

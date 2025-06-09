@@ -5,22 +5,23 @@ import styles from './styles.module.scss';
 import { HeaderContent } from '@/components/structure/HeaderContent';
 import { NavBar } from '@/components/structure/NavBar';
 import { MainContent } from '@/components/structure/MainContent';
-import { HomeBanner } from './_ui/HomeBanner';
 import { HomeObjectives } from './_ui/HomeObjectives';
 import { HomeAbout } from './_ui/HomeAbout';
 import { HomeSchedule } from './_ui/HomeSchedule';
+import { BannerSlider } from '@/components/comp/BannerSlider';
 
 export default function HomePage() {
     return (
         <div className={styles.home_page}>
-            <HeaderContent height='100vh' style={{ backgroundImage: 'url(/images/paroquia-bg.jpg)'}}>
-                <NavBar/>
-                <HomeBanner/>
+            <HeaderContent style={{ height: '100vh', width: '100vw' }}>
+                <BannerSlider style={{ height: '100vh', width: '100vw' }}>
+                    <NavBar />
+                </BannerSlider>
             </HeaderContent>
             <MainContent>
-                <HomeObjectives/>
-                <HomeAbout/>
-                <HomeSchedule/>
+                <HomeObjectives />
+                <HomeAbout />
+                <HomeSchedule />
             </MainContent>
         </div>
     )

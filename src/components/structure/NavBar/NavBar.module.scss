@@ -1,29 +1,41 @@
-@use '@/styles/variables.scss' as *;
+@use '../../../styles/variables.scss' as *;
 
-.navBar_content {
+.navBar__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 64px;
-  background-color: #000000;
+  padding: 16px 64px;
+  backdrop-filter: blur(6px);
+  background-color: $background-secondary;
   position: relative;
   width: 100%;
   z-index: 3;
+  transition: background 0.3s ease-in-out;
+  border-bottom: none;
+  box-shadow: none;
 
-  .navBar_content_logo {
+  .navBar__content__logo {
     display: flex;
     align-items: center;
     cursor: pointer;
+    gap: 8px;
+    width: fit-content;
+
+    img {
+      width: fit-content;
+      height: 70px;
+      object-fit: contain;
+    }
   }
 
-  .navBar_content_items {
+  .navBar__content__items {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 48px;
   }
 }
 
-.navBar_content_burger {
+.navBar__content__burger {
   display: none;
   flex-direction: column;
   align-items: center;
@@ -71,17 +83,19 @@
 }
 
 @media screen and (max-width: 1040px) {
-  .navBar_content {
+  .navBar__content {
     padding: 8px 32px;
 
-    .navBar_content_items {
+    .navBar__content__items {
       gap: 16px;
 
-      a, span, button {
+      a,
+      span,
+      button {
         font-size: 0.9rem;
       }
 
-      a > span {
+      a>span {
         font-size: 0.9rem;
       }
     }
@@ -89,15 +103,15 @@
 }
 
 @media screen and (max-width: 768px) {
-  .navBar_content {
+  .navBar__content {
     position: relative;
     z-index: 1;
 
-    .navBar_content_logo {
+    .navBar__content__logo {
       z-index: 3;
     }
 
-    .navBar_content_items {
+    .navBar__content__items {
       position: fixed;
       top: 0;
       right: -100vw;
@@ -135,7 +149,7 @@
     }
   }
 
-  .navBar_content_burger {
+  .navBar__content__burger {
     z-index: 3;
     display: flex;
 

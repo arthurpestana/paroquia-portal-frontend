@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./ObjectiveItem.module.scss";
-import ChurchIcon from '@mui/icons-material/Church';
+import { ChurchOutlined } from "@mui/icons-material";
+
 
 type ObjectiveItemProps = {
     icon?: string;
@@ -9,21 +10,24 @@ type ObjectiveItemProps = {
 };
 
 const iconMap: Record<string, React.ReactNode> = {
-    Church: <ChurchIcon />
+    Church: <ChurchOutlined />
 };
 
 
 export const ObjectiveItem = ({ icon, title, description }: ObjectiveItemProps) => {
+
+    console.log("ObjectiveItem rendered with props:", { icon, title, description });
+
     return (
-        <div className={styles.objectives_item}>
-            <div className={styles.objectives_item_header}>
+        <div className={styles.objectivesItem__content}>
+            <div className={styles.objectivesItem__content__header}>
                 {icon && (
-                    <div className={styles.objectives_item_header_icon}>
+                    <div className={styles.objectivesItem__content__header__icon}>
                         {icon && iconMap[icon as string]}
                     </div>
                 )}
             </div>
-            <div className={styles.objectives_item_content}>
+            <div className={styles.objectivesItem__content__content}>
                 <h4>{title}</h4>
                 <span>{description}</span>
             </div>

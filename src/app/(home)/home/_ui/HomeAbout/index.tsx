@@ -4,50 +4,51 @@ import { SectionTitle } from '@/components/comp/SectionTitle';
 import aboutUs from "@/lib/data/home/aboutUsInfo.json";
 import { Button } from '@/components/comp/Button';
 import Image from 'next/image';
+import { EastOutlined } from '@mui/icons-material';
 
 export const HomeAbout = () => {
     return (
-        <div className={styles.aboutUs_content} id='aboutUs'>
-            <div className={styles.aboutUs_content_main}>
-                <SectionTitle
-                    title='Propósitos'
-                    subtitle='Sub-Headline'
-                    align='center'
-                />
-                <div className={styles.aboutUs_content_main_text}>
+        <div className={styles.homeAboutUs__content} id='aboutUs'>
+            <div className={styles.homeAboutUs__content__main}>
+                <div className={styles.homeAboutUs__content__main__header}>
+                    <SectionTitle
+                        title='Propósitos'
+                        subtitle='Sub-Headline'
+                        align='center'
+                    />
                     <p>{aboutUs.description}</p>
-                </div>
-                <div className={styles.aboutUs_content_main_button}>
                     <Button
                         label='Saiba Mais'
                         variant='contained'
                         darkMode={false}
                     />
                 </div>
-                <div className={styles.aboutUs_content_main_image}>
+                <div className={styles.homeAboutUs__content__main__image}>
                     {aboutUs.images.map((img, idx) => (
-                        <div className={styles.aboutUs_content_main_image_item} key={idx}>
-                            <Image 
+                        <div className={styles.homeAboutUs__content__main__image__item} key={idx}>
+                            <Image
                                 src={img.src}
                                 fill
-                                style={{objectFit: 'cover'}}
+                                style={{ objectFit: 'cover' }}
                                 alt='Image'
                             />
                         </div>
                     ))}
                 </div>
-                <SectionTitle
-                    title='Comemore Conosco'
-                    subtitle='Nossa Missão e Visão'
-                    align='center'
-                />
-                <div className={styles.aboutUs_content_main_text}>
-                    <p className={styles.aboutUs_content_main_text_second}>{aboutUs.description}</p>
-                </div>
-                <div className={styles.aboutUs_content_main_button}>
+                <div className={styles.homeAboutUs__content__main__footer}>
+                    <div className={styles.homeAboutUs__content__main__footer__title}>
+                        <SectionTitle
+                            title='Comemore Conosco'
+                            subtitle='Nossa Missão e Visão'
+                            align='center'
+                        />
+                    </div>
+                    <p>{aboutUs.description}</p>
                     <Button
                         label='Leia Mais'
-                        variant='outlined'
+                        variant='text'
+                        icon={<EastOutlined />}
+                        iconPosition='right'
                         darkMode={false}
                     />
                 </div>

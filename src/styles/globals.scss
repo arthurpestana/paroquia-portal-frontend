@@ -1,14 +1,6 @@
 @use './variables.scss' as *;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-.MuiSvgIcon-root {
-  all: unset !important;
-  width: 20px !important;
-  height: 20px !important;
-  fill: none !important;
-  transition: ease-in-out 0.1s !important;
-}
-
 .Toastify__toast {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;

@@ -1,4 +1,4 @@
-.objectives_content {
+.homeObjectives__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,7 +8,7 @@
   gap: 32px;
   padding: 64px 64px;
 
-  .objectives_content_main {
+  .homeObjectives__content__main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@
     gap: 24px;
   }
 
-  .objectives_content_button {
+  .homeObjectives__content__button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,8 +26,8 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .objectives_content {
-    .objectives_content_main {
+  .homeObjectives__content {
+    .homeObjectives__content__main {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
@@ -40,20 +40,20 @@
 
 
 @media screen and (max-width: 1040px) {
-  .objectives_content {
+  .homeObjectives__content {
     padding: 64px 48px;
 
-    .objectives_content_main {
+    .homeObjectives__content__main {
       gap: 20px;
     }
   }
 }
 
 @media screen and (max-width: 768px) {
-  .objectives_content {
+  .homeObjectives__content {
     padding: 48px 16px 48px 16px;
 
-    .objectives_content_main {
+    .homeObjectives__content__main {
       gap: 16px;
       display: grid;
       grid-template-columns: 1fr;
@@ -63,7 +63,7 @@
       margin: 0 auto;
     }
 
-    .objectives_content_button {
+    .homeObjectives__content__button {
       button {
         span {
           font-size: 0.9rem;
@@ -74,16 +74,16 @@
 }
 
 @media screen and (max-width: 480px) {
-  .objectives_content {
+  .homeObjectives__content {
     padding: 32px 16px 32px 16px;
     gap: 24px;
 
-    .objectives_content_main {
+    .homeObjectives__content__main {
       flex-direction: column;
       gap: 16px;
     }
 
-    .objectives_content_button {
+    .homeObjectives__content__button {
       width: 100%;
     }
   }

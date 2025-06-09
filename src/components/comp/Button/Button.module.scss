@@ -21,17 +21,31 @@
     border: none;
     transition: ease-in-out 0.2s;
     display: flex;
+    gap: 8px;
 
     span {
         font-size: 16px;
         font-weight: 500;
         text-align: center;
         color: $text-primary;
+        line-height: 1.5px;
+        transition: ease-in-out 0.2s;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: $text-primary;
+            transition: ease-in-out 0.2s;
+        }
     }
 
     &:hover {
         background-color: $brand-primary-5;
-        color: $text-light;
+
+        span {
+            color: darken($text-primary, 10%);
+            fill: darken($text-primary, 10%);
+        }
     }
 
     &.dark {
@@ -50,7 +64,7 @@
 .button__content__outlined {
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid $foreground-primary;
+    border: 2px solid $foreground-secondary;
     padding: 12px 48px;
     border-radius: 32px;
 
@@ -62,8 +76,8 @@
     }
 
     &:hover {
-        background-color: darken($foreground-primary, 10%);
-        border: 2px solid darken($foreground-primary, 10%);
+        background-color: darken($foreground-secondary, 10%);
+        border: 2px solid darken($foreground-secondary, 10%);
 
         span {
             color: $text-light;
@@ -89,7 +103,7 @@
 
 .button__content__contained {
     cursor: pointer;
-    background-color: $foreground-primary;
+    background-color: $foreground-secondary;
     padding: 16px 48px;
     border-radius: 12px;
 
@@ -101,20 +115,20 @@
     }
 
     &:hover {
-        background-color: darken($foreground-primary, 10%);
+        background-color: darken($foreground-secondary, 10%);
     }
 
     &.dark {
         background-color: $background-secondary;
 
         span {
-            color: $foreground-primary;
+            color: $foreground-secondary;
         }
 
         &:hover {
             background-color: darken($foreground-primary, 10%);
             span {
-                color: $text-light;
+                color: $foreground-secondary;
             }
         }
     }
