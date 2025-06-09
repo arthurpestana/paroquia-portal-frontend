@@ -1,5 +1,9 @@
 export type NavItemType = {
-    href: string;
     label: string;
+    href?: string;
     isButton?: boolean;
-}
+    dropdown?: {
+        label: string;
+        href: string;
+    }[];
+};

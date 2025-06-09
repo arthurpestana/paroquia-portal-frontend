@@ -49,6 +49,7 @@ export const NavBar = () => {
               key={item.label}
               href={item.href}
               label={item.label}
+              dropdown={item.dropdown}
               onClick={() => setIsOpenNav(false)}
             />
           );

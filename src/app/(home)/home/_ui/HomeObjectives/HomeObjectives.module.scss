@@ -3,10 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  max-width: 100vw;
+  width: 100%;
   gap: 32px;
-  padding: 64px 64px;
+  padding: 64px 150px;
 
   .homeObjectives__content__main {
     display: flex;
@@ -14,7 +13,7 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    gap: 24px;
+    gap: 32px;
   }
 
   .homeObjectives__content__button {

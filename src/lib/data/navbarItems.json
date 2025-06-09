@@ -4,20 +4,61 @@
     "href": "/home"
   },
   {
-    "label": "Sobre Nós",
-    "href": "/home"
+    "label": "Províncias",
+    "dropdown": [
+      {
+        "label": "Promoção vocacional",
+        "href": "https://carmelitas.org.br/categoria/vocacional/"
+      },
+      {
+        "label": "Carisma Carmelitano",
+        "href": "https://carmelitas.org.br/carisma-carmelitano/"
+      },
+      {
+        "label": "Contemplação",
+        "href": "#"
+      },
+      {
+        "label": "Espiritualidade",
+        "href": "https://carmelitas.org.br/espiritualidade-carmelitana/"
+      },
+      {
+        "label": "Nossa Senhora",
+        "href": "https://carmelitas.org.br/nossa-senhora/"
+      },
+      {
+        "label": "Escapulario",
+        "href": "https://carmelitas.org.br/a-origem-do-escapulario/"
+      },
+      {
+        "label": "Santos e Escapulario",
+        "href": "https://carmelitas.org.br/os-santos-e-o-escapulario/"
+      },
+      {
+        "label": "Santos Carmelitas",
+        "href": "https://carmelitas.org.br/santoral-carmelita/"
+      }
+    ]
   },
   {
-    "label": "Novidades",
-    "href": "/home"
+    "label": "História",
+    "href": "/home#aboutUs"
   },
   {
-    "label": "Blog",
-    "href": "/home"
+    "label": "Missas",
+    "href": "/home#masses"
+  },
+  {
+    "label": "Eventos",
+    "href": "/home#events"
+  },
+  {
+    "label": "Localização",
+    "href": "/home#location"
   },
   {
     "label": "Contate-nos",
-    "href": "https://www.unitins.br/Eventos/Inscricao/2244",
+    "href": "https://www.instagram.com/paroquiamontedocarmo/",
     "isButton": true
   }
 ]
