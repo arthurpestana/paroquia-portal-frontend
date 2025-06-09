@@ -24,8 +24,8 @@
             transition: ease-in-out 0.2s;
 
             &.active {
-                background-color: $foreground-secondary;
-                width: 16px;
+                background-color: darken($foreground-secondary, 10%);
+                width: 18px;
                 border-radius: 24px;
             }
 

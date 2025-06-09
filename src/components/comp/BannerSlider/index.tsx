@@ -37,7 +37,7 @@ export const BannerSlider = ({ style, children }: BannerSliderProps) => {
             className={styles.bannerSlider__content}
             style={{
                 ...style,
-                backgroundImage: `url(${banner?.image || '/images/paroquia-bg.jpg'})`,
+                backgroundImage: `url(${banner?.image?.url || '/images/paroquia-bg.jpg'})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}
