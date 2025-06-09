@@ -1,11 +1,12 @@
 import api from '@/services/api'
-import { BannerType } from '../types/QueriesTypes';
+import { BannerResponse } from '../types/QueriesTypes';
 
-export const getBanners = async (): Promise<BannerType[]> => {
+export const getBanners = async (): Promise<BannerResponse[]> => {
   const response = await api.get('/banners');
   return response.data;
 }
 
-export const fetchBanners = async () => {
-  return await getBanners()
+export const getActiveBanners = async (): Promise<BannerResponse[]> => {
+  const response = await api.get('/banners/active');
+  return response.data;
 }

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './BannerSlider.module.scss'
 import { Button } from '@/components/comp/Button'
 import { BannerSliderControls } from './BannerSliderControls'
-import { useBanners } from '@/hooks/useBanners'
+import { useActiveBanners } from '@/hooks/useActiveBanners'
 import { useRouter } from 'next/navigation'
 
 type BannerSliderProps = {
@@ -14,8 +14,9 @@ type BannerSliderProps = {
 
 export const BannerSlider = ({ style, children }: BannerSliderProps) => {
     const router = useRouter()
-    const { banners, loading, error } = useBanners()
+    const { banners, loading, error } = useActiveBanners()
     const [currentBanner, setCurrentBanner] = useState(0)
+    console.log('banners', banners)
 
     useEffect(() => {
         const interval = setInterval(() => {

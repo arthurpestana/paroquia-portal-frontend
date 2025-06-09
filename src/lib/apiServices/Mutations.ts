@@ -1,5 +1,6 @@
 import api from '@/services/api'
-import { LoginRequest, LoginResponse } from '../types/MutationsTypes'
+import { LoginRequest } from '../types/MutationsTypes'
+import { LoginResponse } from '../types/QueriesTypes'
 
 export const loginUser = async (data: LoginRequest): Promise<LoginResponse> => {
     try {

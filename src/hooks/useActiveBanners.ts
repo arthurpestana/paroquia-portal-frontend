@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react'
-import { getBanners } from '@/lib/apiServices/Queries'
+import { getActiveBanners } from '@/lib/apiServices/Queries'
 import { BannerResponse } from '@/lib/types/QueriesTypes'
 
-export const useBanners = () => {
+export const useActiveBanners = () => {
   const [banners, setBanners] = useState<BannerResponse[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
@@ -11,7 +11,7 @@ export const useBanners = () => {
   useEffect(() => {
     const fetchBanners = async () => {
       try {
-        const data = await getBanners()
+        const data = await getActiveBanners()
         setBanners(data)
       } catch (err: Error | any) {
         console.error('Erro ao buscar banners:', err)
