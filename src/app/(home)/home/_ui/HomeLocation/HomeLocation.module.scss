@@ -1,0 +1,113 @@
+@import '@/styles/variables.scss';
+
+.homeLocation__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100vw;
+    padding: 64px 150px 96px 150px;
+    min-height: 500px;
+    gap: 48px;
+
+    .homeLocation__content__information {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            color: $text-primary;
+            text-align: left;
+            width: 90%;
+        }
+    }
+
+    .homeLocation__content__map {
+        flex: 1.3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        iframe {
+            width: 100%;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .homeLocation__content {
+        padding: 64px 48px;
+        gap: 24px;
+
+        .homeLocation__content__information {
+            p {
+                font-size: 0.9rem;
+            }
+        }
+
+        .homeLocation__content__map {
+            flex: 1.3;
+
+            iframe {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .homeLocation__content {
+        flex-direction: column;
+        padding: 48px 16px 64px 16px;
+        gap: 32px;
+
+        .homeLocation__content__information,
+        .homeLocation__content__map {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
+
+        .homeLocation__content__map {
+            iframe {
+                height: 350px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .homeLocation__content {
+        padding: 32px 16px 64px 16px;
+        gap: 24px;
+
+        .homeLocation__content__information {
+            p {
+                font-size: 0.9rem;
+            }
+        }
+
+        .homeLocation__content__map {
+            iframe {
+                height: 250px;
+                border-radius: 24px;
+            }
+        }
+    }
+}

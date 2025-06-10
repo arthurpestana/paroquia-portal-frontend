@@ -10,6 +10,8 @@ import { HomeAbout } from './_ui/HomeAbout';
 import { HomeSchedule } from './_ui/HomeSchedule';
 import { BannerSlider } from '@/components/comp/BannerSlider';
 import { HomeEvents } from './_ui/HomeEvents';
+import { HomeLocation } from './_ui/HomeLocation';
+import { FooterContent } from '@/components/structure/FooterContent';
 
 export default function HomePage() {
     return (
@@ -24,7 +26,9 @@ export default function HomePage() {
                 <HomeAbout />
                 <HomeSchedule />
                 <HomeEvents />
+                <HomeLocation />
             </MainContent>
+            <FooterContent />
         </div>
     )
 }

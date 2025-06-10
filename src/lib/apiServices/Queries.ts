@@ -30,3 +30,17 @@ export const getAllEvents = async (params?: GetAllParamsType): Promise<EventResp
     const response = await api.get(`/events${query ? `?${query}` : ''}`);
     return response.data;
 }
+
+export const getAllMassTimes = async (params?: GetAllParamsType): Promise<EventResponse[]> => {
+    const query = QueryStringfy(params || {});
+
+    const response = await api.get(`/massTimes${query ? `?${query}` : ''}`);
+    return response.data;
+}
+
+export const getActiveMassTimes = async (params?: GetAllParamsType): Promise<EventResponse[]> => {
+    const query = QueryStringfy(params || {});
+
+    const response = await api.get(`/massTimes/active${query ? `?${query}` : ''}`);
+    return response.data;
+}

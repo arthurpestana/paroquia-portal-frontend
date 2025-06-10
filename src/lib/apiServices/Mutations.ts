@@ -4,7 +4,7 @@ import { LoginResponse } from '../types/QueriesTypes'
 
 export const loginUser = async (data: LoginRequest): Promise<LoginResponse> => {
     try {
-        const response = await api.post('/auth/login', data)
+        const response = await api.post('/users/auth/login', data)
         return response.data
     } catch (error) {
         console.error('Login failed:', error)
