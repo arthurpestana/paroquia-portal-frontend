@@ -4,9 +4,9 @@ import { NavBar } from '@/components/structure/NavBar';
 import { FooterContent } from '@/components/structure/FooterContent';
 import { MainContent } from '@/components/structure/MainContent';
 
-export default function EventsPage() {
+export default function HistoryPage() {
     return (
-        <div className={styles.events__page}>
+        <div className={styles.history__page}>
             <HeaderContent style={{ width: '100vw' }}>
                 <NavBar />
             </HeaderContent>

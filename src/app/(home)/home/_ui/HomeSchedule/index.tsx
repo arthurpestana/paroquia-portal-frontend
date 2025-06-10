@@ -6,7 +6,7 @@ import { AccessTimeOutlined, FmdGoodOutlined } from '@mui/icons-material';
 
 export const HomeSchedule = () => {
     return (
-        <div className={style.homeSchedule__content}>
+        <div className={style.homeSchedule__content} id="masses">
             <SectionTitle
                 subtitle='Missas'
                 title="Programação e Horários de Missas"

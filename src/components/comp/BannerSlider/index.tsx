@@ -16,7 +16,7 @@ export const BannerSlider = ({ style, children }: BannerSliderProps) => {
     const router = useRouter()
     const { banners, loading, error } = useActiveBanners()
     const [currentBanner, setCurrentBanner] = useState(0)
-    console.log('banners', banners)
+    console.log('banners', banners, loading, error)
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -25,8 +25,6 @@ export const BannerSlider = ({ style, children }: BannerSliderProps) => {
 
         return () => clearInterval(interval)
     }, [banners])
-    if (error) return <p>Erro ao carregar banners: {error.message}</p>
-    if (loading) return <p>Carregando banners...</p>
 
     const banner = banners[currentBanner]
 

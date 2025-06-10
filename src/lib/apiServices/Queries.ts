@@ -44,3 +44,31 @@ export const getActiveMassTimes = async (params?: GetAllParamsType): Promise<Eve
     const response = await api.get(`/massTimes/active${query ? `?${query}` : ''}`);
     return response.data;
 }
+
+export const getActivePastorals = async (params?: GetAllParamsType): Promise<EventResponse[]> => {
+    const query = QueryStringfy(params || {});
+
+    const response = await api.get(`/pastorals/active${query ? `?${query}` : ''}`);
+    return response.data;
+}
+
+export const getAllPastorals = async (params?: GetAllParamsType): Promise<EventResponse[]> => {
+    const query = QueryStringfy(params || {});
+
+    const response = await api.get(`/pastorals${query ? `?${query}` : ''}`);
+    return response.data;
+}
+
+export const getActivePriests = async (params?: GetAllParamsType): Promise<EventResponse[]> => {
+    const query = QueryStringfy(params || {});
+
+    const response = await api.get(`/priests/active${query ? `?${query}` : ''}`);
+    return response.data;
+}
+
+export const getAllPriests = async (params?: GetAllParamsType): Promise<EventResponse[]> => {
+    const query = QueryStringfy(params || {});
+
+    const response = await api.get(`/priests${query ? `?${query}` : ''}`);
+    return response.data;
+}

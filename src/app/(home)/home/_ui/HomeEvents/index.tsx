@@ -10,7 +10,7 @@ export const HomeEvents = () => {
     console.log(events, loading, error);
 
     return (
-        <div className={styles.homeEvents__content}>
+        <div className={styles.homeEvents__content} id='events'>
             <div className={styles.homeEvents__content__header}>
                 <SectionTitle
                     title="Eventos e Programações"
