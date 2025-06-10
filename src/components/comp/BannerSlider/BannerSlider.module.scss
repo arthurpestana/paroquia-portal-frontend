@@ -60,10 +60,27 @@
                     font-weight: 400;
                     line-height: 1.5;
                 }
+
+                @media screen and (max-width: 460px){
+                    max-width: 100%;
+                    min-height: 100%;
+
+                    h3{
+                        font-size: 1.2em;
+                    }
+
+                    h1{
+                        font-size: 3em;
+                    }
+                }
             }
 
             .bannerSlider__content__main__info__button {
                 margin-top: 8px;
+
+                @media screen and (max-width: 460px){
+                    margin-top: 0;
+                }
             }
         }
     }
