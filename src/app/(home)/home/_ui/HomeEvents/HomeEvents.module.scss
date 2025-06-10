@@ -1,5 +1,10 @@
 @use '../../../../../styles/variables.scss' as *;
 
 .homeEvents__content {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 64px 150px;
 }

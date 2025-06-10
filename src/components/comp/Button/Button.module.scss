@@ -64,7 +64,7 @@
 .button__content__outlined {
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid $foreground-secondary;
+    border: 2px solid $foreground-primary;
     padding: 12px 48px;
     border-radius: 32px;
 
@@ -76,8 +76,8 @@
     }
 
     &:hover {
-        background-color: darken($foreground-secondary, 10%);
-        border: 2px solid darken($foreground-secondary, 10%);
+        background-color: darken($foreground-primary, 10%);
+        border: 2px solid darken($foreground-primary, 10%);
 
         span {
             color: $text-light;
@@ -136,6 +136,7 @@
 
 .button__content__onlyIcon {
     padding: 4px;
+    border-radius: 8px;
     aspect-ratio: 1;
     display: flex;
     align-items: center;

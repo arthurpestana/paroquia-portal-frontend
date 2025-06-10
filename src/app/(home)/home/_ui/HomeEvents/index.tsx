@@ -2,15 +2,12 @@ import React from 'react';
 import styles from './HomeEvents.module.scss';
 import { SectionTitle } from '@/components/comp/SectionTitle';
 import { useNextEvents } from '@/hooks/useNextEvents';
+import { SliderCards } from '@/components/comp/SliderCards';
+import { EventCard } from './EventCard';
 
 export const HomeEvents = () => {
     const { events, loading, error } = useNextEvents()
     console.log(events, loading, error);
-
-    // const cards = Array.from({ length: 5 }, (_, i) => ({
-    //     id: i + 1,
-    //     content: <div style={{ padding: 20, background: '#eee', borderRadius: 10 }}>Card {i + 1}</div>,
-    // }));
 
     return (
         <div className={styles.homeEvents__content}>
@@ -22,7 +19,21 @@ export const HomeEvents = () => {
                 />
             </div>
             <div className={styles.homeEvents__content__body}>
-                {/* <SliderCards cards={cards} /> */}
+                <SliderCards>
+                    {events.map((event, idx) => (
+                        <EventCard
+                            key={idx}
+                            title={event.title}
+                            description={event.description}
+                            location={event.location}
+                            date={event.date}
+                            time={{
+                                startTime: event.startTime,
+                                endTime: event.endTime
+                            }}
+                        />
+                    ))}
+                </SliderCards>
             </div>
         </div>
     )
