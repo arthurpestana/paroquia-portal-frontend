@@ -19,6 +19,7 @@ export const SliderCards = ({ children }: SliderCardsProps) => {
     const scrollRef = useRef<HTMLDivElement>(null)
     const firstCardRef = useRef<HTMLDivElement>(null)
     const [cardWidth, setCardWidth] = useState(280)
+    const [showControls, setShowControls] = useState(false)
 
     useEffect(() => {
         if (firstCardRef.current) {
@@ -26,6 +27,15 @@ export const SliderCards = ({ children }: SliderCardsProps) => {
             setCardWidth(width)
         }
     }, [children])
+
+    useEffect(() => {
+        if (!scrollRef.current || !firstCardRef.current) return
+
+        const visibleWidth = scrollRef.current.clientWidth
+        const totalWidth = cardWidth * children.length
+
+        setShowControls(totalWidth > visibleWidth)
+    }, [cardWidth, children])
 
     const scrollLeft = () => {
         scrollRef.current?.scrollBy({ left: -cardWidth, behavior: 'smooth' })
@@ -39,14 +49,16 @@ export const SliderCards = ({ children }: SliderCardsProps) => {
 
     return (
         <div className={styles.sliderCards__content}>
-            <div className={styles.sliderCards__content__controls}>
-                <Button
-                    onClick={scrollLeft}
-                    aria-label="Scroll Left"
-                    icon={<ChevronLeftOutlined />}
-                    variant="outlined"
-                />
-            </div>
+            {showControls && (
+                <div className={styles.sliderCards__content__controls}>
+                    <Button
+                        onClick={scrollLeft}
+                        aria-label="Scroll Left"
+                        icon={<ChevronLeftOutlined />}
+                        variant="outlined"
+                    />
+                </div>
+            )}
             <div ref={scrollRef} className={styles.sliderCards__content__slider}>
                 {children.map((card, idx) => (
                     <div
@@ -58,14 +70,16 @@ export const SliderCards = ({ children }: SliderCardsProps) => {
                     </div>
                 ))}
             </div>
-            <div className={styles.sliderCards__content__controls}>
-                <Button
-                    onClick={scrollRight}
-                    aria-label="Scroll Right"
-                    icon={<ChevronRightOutlined />}
-                    variant="outlined"
-                />
-            </div>
+            {showControls && (
+                <div className={styles.sliderCards__content__controls}>
+                    <Button
+                        onClick={scrollRight}
+                        aria-label="Scroll Right"
+                        icon={<ChevronRightOutlined />}
+                        variant="outlined"
+                    />
+                </div>
+            )}
         </div>
     )
 }

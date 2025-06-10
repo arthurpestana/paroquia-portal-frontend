@@ -26,7 +26,8 @@ export const EventCard = ({ title, subtitle, location, date, description, time }
             </div>
             <div className={styles.eventCard__content__footer}>
                 <span className={styles.eventCard__content__footer__location}>{location}</span>
-                <span className={styles.eventCard__content__footer__date}>{formatFullDate(date)} - {formatTime(time.startTime)} à {formatTime(time.endTime)}</span>
+                <span className={styles.eventCard__content__footer__date}>{formatFullDate(date)}</span>
+                <span className={styles.eventCard__content__footer__date}>{formatTime(time.startTime)} à {formatTime(time.endTime)}</span>
             </div>
         </div>
     )

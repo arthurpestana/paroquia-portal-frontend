@@ -20,7 +20,20 @@ export const HomeEvents = () => {
             </div>
             <div className={styles.homeEvents__content__body}>
                 <SliderCards>
-                    {events.map((event, idx) => (
+                    {Array.from({ length: 3 }).map((_, idx) => (
+                        <EventCard
+                            key={idx}
+                            title="Carregando..."
+                            description="Aguarde enquanto os eventos são carregados."
+                            location="Carregando localização..."
+                            date={Date.now()}
+                            time={{
+                                startTime: Date.now(),
+                                endTime: Date.now() + 3600000
+                            }}
+                        />
+                    ))}
+                    {/* {events.map((event, idx) => (
                         <EventCard
                             key={idx}
                             title={event.title}
@@ -32,7 +45,7 @@ export const HomeEvents = () => {
                                 endTime: event.endTime
                             }}
                         />
-                    ))}
+                    ))} */}
                 </SliderCards>
             </div>
         </div>

@@ -7,4 +7,13 @@
     justify-content: center;
     gap: 32px;
     padding: 64px 150px;
+    position: relative;
+
+    .homeEvents__content__body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
 }
