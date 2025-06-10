@@ -9,24 +9,40 @@
     gap: 32px;
     padding: 64px 150px;
 
+    @media screen and (max-width: 460px){
+            padding: 0;
+        }
+
     .homeSchedule__content__main {
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 100%;
+        max-width: 100%;
         min-height: 600px;
         background-color: $foreground-secondary;
         box-shadow: 4px 8px 8px $brand-primary-10;
         border-radius: 24px 0px 0px 24px;
 
+        @media screen and (max-width: 460px){
+            flex-direction: column;
+            width: 80%;
+            height: 800px;
+            gap: 12px;
+        }
+
         .homeSchedule__content__main__info {
             display: flex;
             flex-direction: column;
             width: 40%;
-            height: 100%;
+            max-height: 100%;
             padding: 32px 64px;
             gap: 32px;
             background-color: $foreground-secondary;
+
+            @media screen and (max-width: 460px){
+                padding: 12px 0;
+                width: 80%;
+            }
 
             .homeSchedule__content__main__info__header {
                 display: flex;
@@ -97,6 +113,11 @@
             overflow: hidden;
             border-radius: 24px 0 0 24px;
             position: relative;
+
+            @media screen and (max-width: 460px){
+                width: 100%;
+                border-radius: 24px 24px 0 0;
+            }
 
             &::after {
                 content: '';
