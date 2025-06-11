@@ -1,0 +1,134 @@
+@use '../../../styles/variables.scss' as *;
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.select__section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    gap: 6px;
+
+    .select__section__label {
+        padding-left: 4px;
+
+        span {
+            font-size: 16px;
+            font-weight: 500;
+            color: $text-primary;
+        }
+    }
+
+    .select__section__header {
+        width: 100%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 8px;
+        padding: 10px;
+        gap: 8px;
+        background-color: $background-primary;
+        border: 1px solid $gray-100;
+        transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+
+        .select__section__header__activeOption {
+            span {
+                color: $text-primary;
+                font-size: 15px;
+            }
+
+            &.empty {
+                span {
+                    color: $gray-100;
+                }
+            }
+        }
+
+        .select__section__header__icon {
+            transform: rotate(-90deg);
+            transition: transform 0.2s ease-in-out;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                color: $text-primary;
+            }
+
+            &.active {
+                transform: rotate(90deg);
+            }
+        }
+
+        &.disabled {
+            background-color: $gray-80;
+            border-color: $gray-100;
+            cursor: not-allowed;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+    }
+
+    .select__section__content {
+        display: flex;
+        top: 110%;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        z-index: 1;
+        flex-direction: column;
+        gap: 8px;
+        border-radius: 8px;
+        padding: 8px 12px;
+        background-color: $background-primary;
+        position: absolute;
+        border: 1px solid $gray-100;
+        animation: fadeIn 0.3s ease-in-out;
+        overflow-y: auto;
+        max-height: 150px;
+
+        scrollbar-width: thin;
+        scrollbar-color: $foreground-primary transparent;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $foreground-primary;
+            border-radius: 4px;
+        }
+
+        .select__section__content__input {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .select__section__content__item {
+            width: 100%;
+            display: flex;
+            padding: 8px 12px;
+            border-radius: 8px;
+            gap: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+
+            span {
+                color: $gray-100;
+                font-size: 15px;
+            }
+
+            &:hover {
+                background-color: darken($background-primary, 5%);
+            }
+        }
+    }
+}

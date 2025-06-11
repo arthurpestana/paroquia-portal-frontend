@@ -10,7 +10,7 @@ export const useNextEvents = (params?: GetAllParamsType) => {
   const [error, setError] = useState<Error | null>(null)
 
   useEffect(() => {
-    const fetchevents = async () => {
+    const fetchEvents = async () => {
       try {
         const data = await getNextEvents(params)
         setEvents(data)
@@ -22,7 +22,7 @@ export const useNextEvents = (params?: GetAllParamsType) => {
       }
     }
 
-    fetchevents()
+    fetchEvents()
   }, [])
 
   return { events, loading, error }

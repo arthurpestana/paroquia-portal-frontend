@@ -9,7 +9,7 @@ export const useBannerById = (id: string) => {
   const [error, setError] = useState<Error | null>(null)
 
   useEffect(() => {
-    const fetchbanner = async () => {
+    const fetchBanner = async () => {
       try {
         const data = await getBannerById(id)
         setBanner(data)
@@ -21,7 +21,7 @@ export const useBannerById = (id: string) => {
       }
     }
 
-    fetchbanner()
+    fetchBanner()
   }, [])
 
   return { banner, loading, error }

@@ -7,10 +7,19 @@ import Link from 'next/link'
 import navbarItemsSide from '../../../lib/data/admin/navbarSideItems.json'
 import { NavBurguer } from '@/components/structure/NavBurguer'
 import Image from 'next/image'
+import Cookies from 'js-cookie';
 import { LogoutOutlined } from '@mui/icons-material'
+import { useRouter } from 'next/navigation'
 
 export const NavBarSide = () => {
     const [isOpenNav, setIsOpenNav] = useState(false);
+    const router = useRouter();
+
+    const handleLogout = () => {
+        Cookies.remove('auth_token');
+        Cookies.remove('user');
+        router.push('/auth');
+    };
 
     return (
         <nav className={`${styles.navBar__content}`}>
@@ -48,7 +57,7 @@ export const NavBarSide = () => {
                         key={'logout'}
                         label={"Sair"}
                         icon={<LogoutOutlined />}
-                        onClick={() => { }}
+                        onClick={handleLogout}
                     />
                 </div>
             </div>

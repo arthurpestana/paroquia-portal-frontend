@@ -1,0 +1,15 @@
+@use '../../../styles/variables.scss' as *;
+
+.contacts__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 32px;
+
+    .contacts__content__body {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+}

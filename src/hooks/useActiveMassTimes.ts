@@ -10,7 +10,7 @@ export const useActiveMassTimes = (params?: GetAllParamsType) => {
   const [error, setError] = useState<Error | null>(null)
 
   useEffect(() => {
-    const fetchBanners = async () => {
+    const fetchMassTimes = async () => {
       try {
         const data = await getActiveMassTimes(params)
         setMassTimes(data)
@@ -22,7 +22,7 @@ export const useActiveMassTimes = (params?: GetAllParamsType) => {
       }
     }
 
-    fetchBanners()
+    fetchMassTimes()
   }, [])
 
   return { massTimes, loading, error }

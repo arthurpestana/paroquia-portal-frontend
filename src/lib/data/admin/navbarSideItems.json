@@ -5,11 +5,6 @@
     "icon": "PhotoLibraryOutlined"
   },
   {
-    "label": "Usuários",
-    "href": "/admin/users",
-    "icon": "PeopleAltOutlined"
-  },
-  {
     "label": "Eventos",
     "href": "/admin/mentorings",
     "icon": "EventOutlined"

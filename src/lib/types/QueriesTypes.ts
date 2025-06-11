@@ -70,6 +70,7 @@ export type MassTimeResponse = {
     startTime: number
     title?: string | null
     specificDate?: number | null
+    isActive: boolean
     description?: string | null
     createdAt: number
     updatedAt: number

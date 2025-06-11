@@ -60,6 +60,7 @@ export type MassTimeRequest = {
     weekday: Weekday
     date?: number
     specificDate?: number
+    isActive?: boolean
     startTime: number
     title?: string
     description?: string

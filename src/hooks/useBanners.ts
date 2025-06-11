@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState, useCallback } from 'react';
-import { getBanners } from '@/lib/apiServices/Queries';
+import { getAllBanners } from '@/lib/apiServices/Queries';
 import { BannerCountResponse } from '@/lib/types/QueriesTypes';
 import { GetAllParamsType } from '@/lib/types/QueryParamsType';
 
@@ -12,7 +12,7 @@ export const useBanners = (params?: GetAllParamsType) => {
   const fetchBanners = useCallback(async () => {
     setLoading(true);
     try {
-      const data = await getBanners(params);
+      const data = await getAllBanners(params);
       setBanners(data);
       setError(null);
     } catch (err: Error | any) {
