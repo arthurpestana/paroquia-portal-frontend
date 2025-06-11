@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export default function BannersLayout({ children }: { children: ReactNode }) {
+export default function ContactsLayout({ children }: { children: ReactNode }) {
   return (
     children
   )

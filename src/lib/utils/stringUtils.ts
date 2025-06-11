@@ -53,3 +53,25 @@ export const formatTime = (timestamp: number): string => {
 
   return `${hours}:${minutes}`
 }
+
+export const getDateTimestamp = (dateStr: string) => {
+    const date = new Date(dateStr);
+    date.setHours(0, 0, 0, 0);
+    return date.getTime();
+};
+
+export const getTimeMilliseconds = (timeStr: string) => {
+    const [hours, minutes] = timeStr.split(':').map(Number);
+    return (hours * 60 + minutes) * 60 * 1000;
+};
+
+export const msToHHMM = (ms: number) => {
+    const hours = String(Math.floor(ms / 3600000)).padStart(2, '0');
+    const minutes = String(Math.floor((ms % 3600000) / 60000)).padStart(2, '0');
+    return `${hours}:${minutes}`;
+};
+
+export const hhmmToMs = (hhmm: string) => {
+    const [hours, minutes] = hhmm.split(':').map(Number);
+    return (hours * 60 + minutes) * 60 * 1000;
+};

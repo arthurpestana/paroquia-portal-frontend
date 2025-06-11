@@ -76,7 +76,7 @@ export const createImage = async (file: File, data: ImageRequest): Promise<Image
     }
 }
 
-export const updateImage = async (id: string, file: File, data: ImageRequest): Promise<ImageResponse> => {
+export const updateImage = async (id: string, file: File | null, data: ImageRequest): Promise<ImageResponse> => {
     try {
         if (file) {
             const formData = new FormData()
