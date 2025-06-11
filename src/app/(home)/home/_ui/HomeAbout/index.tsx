@@ -1,22 +1,28 @@
 import React from 'react';
 import styles from './HomeAbout.module.scss';
 import { SectionTitle } from '@/components/comp/SectionTitle';
-import aboutUs from "@/lib/data/home/aboutUsInfo.json";
+import aboutUsHome from '@/lib/data/home/aboutUsInfo.json';
+import aboutUsHistory from '@/lib/data/history/HistoryAbout.json';
 import { Button } from '@/components/comp/Button';
 import Image from 'next/image';
 import { EastOutlined } from '@mui/icons-material';
 
-export const HomeAbout = () => {
+type ProspsAbout = {
+    subtitle?: string,
+    title?: string,
+    description?: string;
+}
+export const HomeAbout = ({subtitle, title, description}: ProspsAbout) => {
     return (
         <div className={styles.homeAboutUs__content} id='aboutUs'>
             <div className={styles.homeAboutUs__content__main}>
                 <div className={styles.homeAboutUs__content__main__header}>
                     <SectionTitle
-                        title='Propósitos'
-                        subtitle='Sub-Headline'
+                        title={title || 'Propósitos'}
+                        subtitle={subtitle || 'Sub-title'}
                         align='center'
                     />
-                    <p>{aboutUs.description}</p>
+                    <p style={{textAlign: description ? 'justify' : 'center'}}>{description || aboutUsHome.description}</p>
                     <Button
                         label='Saiba Mais'
                         variant='contained'
@@ -24,7 +30,17 @@ export const HomeAbout = () => {
                     />
                 </div>
                 <div className={styles.homeAboutUs__content__main__image}>
-                    {aboutUs.images.map((img, idx) => (
+                    {description ? aboutUsHistory.images.map((img, idx) => (
+                        <div className={styles.homeAboutUs__content__main__image__item} key={idx}>
+                            <Image
+                                src={img.src}
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                alt='Image'
+                            />
+                        </div>
+                    )) :
+                    aboutUsHome.images.map((img, idx) => (
                         <div className={styles.homeAboutUs__content__main__image__item} key={idx}>
                             <Image
                                 src={img.src}
@@ -43,7 +59,7 @@ export const HomeAbout = () => {
                             align='center'
                         />
                     </div>
-                    <p>{aboutUs.description}</p>
+                    <p>{aboutUsHome.description}</p>
                     <Button
                         label='Leia Mais'
                         variant='text'

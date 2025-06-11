@@ -1,0 +1,50 @@
+[
+  {
+    "title": "PASCOM",
+    "description": "Pastoral da Comunicação, é o serviço da Igreja Católica que cuida da comunicação, ou seja, da forma como a Igreja interage com o mundo e como transmite seus valores e mensagem. A PASCOM não é apenas mais uma pastoral, mas sim um elo de ligação entre todos os eventos, pastorais, movimentos e associações da comunidade, tanto dentro como fora, utilizando diversos meios de comunicação."
+  },
+  {
+    "title": "Catequese",
+    "description": "A Pastoral da Catequese é a ação da Igreja Católica focada na educação religiosa, ou seja, na formação da fé. Visa aprofundar o conhecimento e a vivência da fé católica, preparando as pessoas para a celebração dos sacramentos, especialmente os da iniciação cristã (Batismo, Eucaristia e Crisma)."
+  },
+  {
+    "title": "Dízimo",
+    "description": "A missão da Pastoral do Dízimo é evangelizar e conscientizar os fiéis católicos sobre a importância do dízimo, tanto para a manutenção da Igreja como para a prática da caridade e partilha. A pastoral visa informar sobre o significado, a aplicação e as dimensões do dízimo, incentivando os fiéis a vivê-lo como um gesto de fé e compromisso com a comunidade e com a missão da Igreja."
+  },
+  {
+    "title": "MESCE",
+    "description": "Ministros Extraordinários da Sagrada Comunhão são fiéis leigos autorizados a distribuir a comunhão em Missas e outras ocasiões, quando não há um ministro ordenado disponível. Sua missão é levar o Santíssimo Sacramento a quem não pode ir à Igreja, como doentes ou pessoas em casa, hospitais ou asilos."
+  },
+  {
+    "title": "Oficina de Oração e Vida",
+    "description": "As Oficinas de Oração e Vida são um serviço eclesial que visa ensinar a orar de forma ordenada, progressiva e variada, através de um guia prático. Elas têm como objetivo transformar os participantes em amigos e discípulos de Jesus, incentivando-os a viverem uma vida mais plena e em comunhão com Deus."
+  },
+  {
+    "title": "Encontro de Casais com Cristo (ECC)",
+    "description": "O ECC é um serviço da Igreja para evangelizar as famílias e fortalecer as pastorais existentes na paróquia, através do engajamento dos casais. Ele promove a formação cristã, a vivência do matrimônio e o compromisso com a realidade social e eclesial da comunidade paroquial."
+  },
+  {
+    "title": "Pastoral da Liturgia",
+    "description": "Tem a missão de organizar e preparar as celebrações litúrgicas, garantindo que sejam vivências profundas de fé e espiritualidade. Coordena leituras, cantos, ornamentação e organização dos ritos litúrgicos, além de promover encontros de formação litúrgica."
+  },
+  {
+    "title": "Terço dos Homens",
+    "description": "O Terço dos Homens é uma expressão de fé e devoção, cujo objetivo é resgatar a presença masculina na Igreja. Através da oração do terço e da meditação dos mistérios da redenção de Cristo, promove a espiritualidade e o fortalecimento da família cristã."
+  },
+  {
+    "title": "Pastoral da Acolhida",
+    "description": "A Pastoral da Acolhida tem como missão recepcionar os participantes das missas com carinho, entregando folhetos, auxiliando os fiéis, especialmente idosos, gestantes e pessoas com deficiência, e promovendo um ambiente confortável e acolhedor nas celebrações litúrgicas."
+  },
+  {
+    "title": "Acólitos e Coroinhas",
+    "description": "Têm a missão de servir ao altar e auxiliar o sacerdote durante as celebrações litúrgicas. Desempenham tarefas como preparar o altar, receber as oferendas e ajudar durante a Eucaristia, promovendo também a formação espiritual e a vivência da fé."
+  },
+  {
+    "title": "Ministério da Música",
+    "description": "O Ministério da Música tem a missão de louvar a Deus por meio do canto e dos instrumentos, especialmente durante as missas. A música é uma forma de evangelização que facilita a participação da comunidade e transmite a mensagem de Deus de maneira acessível."
+  },
+  {
+    "title": "Terço das Mulheres",
+    "description": "O Terço das Mulheres tem como missão evangelizar e promover a fé por meio da oração, do testemunho e da prática da caridade. Fortalece a espiritualidade das participantes e as prepara para serem agentes de mudança na Igreja e na sociedade."
+  }
+]
