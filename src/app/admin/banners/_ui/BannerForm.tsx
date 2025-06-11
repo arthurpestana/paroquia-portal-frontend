@@ -4,8 +4,8 @@ import { Row } from '@/components/adminComp/Row';
 import { PopupForm } from '@/components/adminComp/Popup/PopupForm';
 import { TextInput } from '@/components/comp/TextInput';
 import { useBannerById } from '@/hooks/useBannerById';
-import { createBanner, createImage } from '@/lib/apiServices/Mutations';
-import { showToast } from '@/lib/utils/showToast';
+import { createBanner, createImage, updateBanner } from '@/lib/apiServices/Mutations';
+import { showToast, showToastPromise } from '@/lib/utils/showToast';
 import React, { useEffect, useState } from 'react';
 import { Textarea } from '@/components/adminComp/Textarea';
 import { FileUpload } from '@/components/adminComp/FileUpload';
@@ -13,9 +13,10 @@ import { FileUpload } from '@/components/adminComp/FileUpload';
 type BannerFormProps = {
     id?: string;
     onClose?: () => void;
+    refetch?: () => void;
 }
 
-export const BannerForm = ({ id, onClose }: BannerFormProps) => {
+export const BannerForm = ({ id, onClose, refetch }: BannerFormProps) => {
     const { banner, loading, error } = useBannerById(id || '');
     console.log(banner, loading, error);
 
@@ -54,26 +55,37 @@ export const BannerForm = ({ id, onClose }: BannerFormProps) => {
         }
 
         try {
-            let uploadedImageId = imageId?._id;
+            const createBannerPromise = async () => {
+                let uploadedImageId = imageId?._id;
 
-            if (imageFile) {
-                const uploaded = await createImage(imageFile, {
-                    title: `${title}-banner-image`,
-                });
-                uploadedImageId = uploaded._id;
+                if (imageFile) {
+                    const uploaded = await createImage(imageFile, {
+                        title: `${title}-banner-image`,
+                    });
+                    uploadedImageId = uploaded._id;
+                }
+
+                await createBanner({
+                    title: title,
+                    description: description,
+                    image: uploadedImageId,
+                    buttonInfo: {
+                        text: buttonInfo.text,
+                        link: buttonInfo.link,
+                    },
+                })
             }
 
-            await createBanner({
-                title: title,
-                description: description,
-                image: uploadedImageId,
-                buttonInfo: {
-                    text: buttonInfo.text,
-                    link: buttonInfo.link,
-                },
-            });
+            await showToastPromise({
+                promise: createBannerPromise(),
+                messages: {
+                    pending: 'Criando banner...',
+                    success: 'Banner criado com sucesso!',
+                    error: 'Erro ao criar o banner.',
+                }
+            })
 
-            showToast('Banner criado com sucesso!', 'success', 'banner-success');
+            if (refetch) refetch();
             if (onClose) onClose();
         } catch (error) {
             console.error('Erro ao criar o banner:', error);
@@ -83,16 +95,55 @@ export const BannerForm = ({ id, onClose }: BannerFormProps) => {
 
 
     const handleUpdateItem = async () => {
-        setFormData({
-            title: banner?.title || '',
-            description: banner?.description || '',
-            imageFile: null as File | null,
-            imageId: banner?.image,
-            buttonInfo: {
-                text: banner?.buttonInfo?.text || '',
-                link: banner?.buttonInfo?.link || '',
+        const { title, description, imageFile, imageId, buttonInfo } = formData;
+
+        if (!id) {
+            showToast('ID do banner não encontrado.', 'error', 'banner-error', 'top-right', 'light');
+            return;
+        }
+
+        if (!title || !description || (!imageFile && !imageId) || !buttonInfo.text || !buttonInfo.link) {
+            showToast('Todos os campos são obrigatórios.', 'error', 'banner-error', 'top-right', 'light');
+            return;
+        }
+
+        try {
+            const updateBannerPromise = async () => {
+                let uploadedImageId = imageId?._id;
+
+                if (imageFile) {
+                    const uploaded = await createImage(imageFile, {
+                        title: `${title}-banner-image`,
+                    });
+                    uploadedImageId = uploaded._id;
+                }
+
+                await updateBanner(id, {
+                    title: title,
+                    description: description,
+                    image: uploadedImageId,
+                    buttonInfo: {
+                        text: buttonInfo.text,
+                        link: buttonInfo.link,
+                    },
+                })
             }
-        })
+
+            await showToastPromise({
+                promise: updateBannerPromise(),
+                messages: {
+                    pending: 'Atualizando banner...',
+                    success: 'Banner atualizado com sucesso!',
+                    error: 'Erro ao atualizar o banner.',
+                }
+            })
+
+            if (refetch) refetch();
+            if (onClose) onClose();
+        } catch (error) {
+            console.error('Erro ao criar o banner:', error);
+            showToast('Erro ao criar o banner.', 'error', 'banner-error', 'top-right', 'light');
+        }
     }
 
     return (
@@ -154,7 +205,7 @@ export const BannerForm = ({ id, onClose }: BannerFormProps) => {
                     label="Imagem do Banner"
                     accept="image/*"
                     value={formData.imageFile}
-                    onChange={(file) => setFormData({ ...formData, imageFile: file as File})}
+                    onChange={(file) => setFormData({ ...formData, imageFile: file as File })}
                 />
             ]}
             isOpen={true}

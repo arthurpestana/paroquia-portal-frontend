@@ -37,15 +37,19 @@ export const updateToast = (
   });
 };
 
-export function toastWithPromise<T>(
-  promise: Promise<T>,
+export const showToastPromise = <T>({
+  promise,
+  messages,
+  options
+}: {
+  promise: Promise<T>;
   messages: {
     pending: string;
     success: string | UpdateOptions<T> | undefined;
     error: string | UpdateOptions<unknown> | undefined;
-  },
-  options?: ToastOptions<T>
-): Promise<T> {
+  };
+  options?: ToastOptions<T>;
+}): Promise<T> => {
   return toast.promise<T, unknown, string>(
     promise,
     {

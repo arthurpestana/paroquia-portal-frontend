@@ -1,19 +1,21 @@
-
 export const QueryStringfy = (obj: Record<string, unknown>): string => {
-    const params = new URLSearchParams();
-    
-    Object.entries(obj).forEach(([key, value]) => {
-        if (value !== undefined && value !== null) {
-        if (Array.isArray(value)) {
-            value.forEach((item) => params.append(key, String(item)));
-        } else {
-            params.set(key, String(value));
-        }
-        }
-    });
-    
-    return params.toString();
-}
+  const params = new URLSearchParams();
+
+  Object.entries(obj).forEach(([key, value]) => {
+    if (value !== undefined && value !== null) {
+      if (Array.isArray(value)) {
+        value.forEach((item) => {
+          params.append(key, typeof item === 'object' ? JSON.stringify(item) : String(item));
+        });
+      } else {
+        const stringifiedValue = typeof value === 'object' ? JSON.stringify(value) : String(value);
+        params.set(key, stringifiedValue);
+      }
+    }
+  });
+
+  return params.toString();
+};
 
 export const formatFullDate = (timestamp: number): string => {
   if (timestamp < 1e12) {

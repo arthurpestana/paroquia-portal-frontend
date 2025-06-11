@@ -34,22 +34,21 @@
     &.active {
         position: relative;
         background-color: $foreground-primary;
+        border-left: 6px solid $background-secondary;
+        border-radius: 0px 8px 8px 0px;
 
-        &:hover {
-            background-color: darken($foreground-secondary, 10%);
+        .navItem__content__text {
+            color: $text-light;
         }
 
-        &::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            height: 100%;
-            left: 0;
-            top: 0;
-            border-radius: 8px;
-            background-color: $background-secondary;
-            animation: both slideBorder 0.2s;
-            transition: all ease-in-out 0.2s;
+        .navItem__content__icon {
+            svg {
+                color: $text-light;
+            }
+        }
+
+        &:hover {
+            background-color: darken($foreground-primary, 10%);
         }
 
         @keyframes slideBorder {

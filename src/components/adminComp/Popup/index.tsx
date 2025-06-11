@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect} from 'react'
-import { Button } from '../Button'
-import { TextInput } from '../TextInput'
+'use client'
+
+import React, { useEffect } from 'react'
 import styles from './Popup.module.scss'
 
 interface PopupProps {
@@ -8,10 +8,18 @@ interface PopupProps {
     isOpen: boolean
 }
 
-export const Popup: React.FC<PopupProps> = ({ children, isOpen }) => {
+export const Popup = ({ children, isOpen }: PopupProps) => {
     useEffect(() => {
-        isOpen ? window.document.body.style.overflow = 'hidden' : window.document.body.style.overflow = ''
-    }, [isOpen]);
+        if (isOpen) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = ''
+        }
+
+        return () => {
+            document.body.style.overflow = ''
+        }
+    }, [isOpen])
 
     return (
         <div className={`${styles.popup__section} ${!isOpen ? styles.closed : ''}`}>

@@ -1,42 +1,42 @@
 [
   {
     "label": "Banners",
-    "href": "/banners",
+    "href": "/admin/banners",
     "icon": "PhotoLibraryOutlined"
   },
   {
     "label": "Usuários",
-    "href": "/users",
+    "href": "/admin/users",
     "icon": "PeopleAltOutlined"
   },
   {
     "label": "Eventos",
-    "href": "/mentorings",
+    "href": "/admin/mentorings",
     "icon": "EventOutlined"
   },
   {
     "label": "Missas",
-    "href": "/massTimes",
+    "href": "/admin/massTimes",
     "icon": "ChurchOutlined"
   },
   {
     "label": "Pastoriais",
-    "href": "/pastorals",
+    "href": "/admin/pastorals",
     "icon": "VolunteerActivismOutlined"
   },
   {
     "label": "Fréis",
-    "href": "/priests",
+    "href": "/admin/priests",
     "icon": "PersonOutlined"
   },
   {
     "label": "Imagens",
-    "href": "/images",
+    "href": "/admin/images",
     "icon": "ImageOutlined"
   },
   {
     "label": "Contatos",
-    "href": "/contacts",
+    "href": "/admin/contacts",
     "icon": "ContactMailOutlined"
   }
 ]

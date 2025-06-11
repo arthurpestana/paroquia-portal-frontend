@@ -9,7 +9,9 @@ export const getBannerById = async (id: string): Promise<BannerResponse> => {
 }
 
 export const getBanners = async (params?: GetAllParamsType): Promise<BannerCountResponse> => {
+    console.log('getBanners', params);
     const query = QueryStringfy(params || {});
+    console.log('getBanners query', query);
 
     const response = await api.get(`/banners${query ? `?${query}` : ''}`);
     return response.data;
