@@ -5,6 +5,14 @@ $transition-speed: 0.5s;
   height: 400px;
   width: 100%;
   overflow: hidden;
+
+  @media (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    height: auto;
+    padding: 1rem;
+  }
 }
 
 .timeline_container_card {
@@ -13,6 +21,7 @@ $transition-speed: 0.5s;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   padding: 1rem;
   color: white;
   font-weight: bold;
@@ -30,5 +39,22 @@ $transition-speed: 0.5s;
 
   &.collapsed {
     flex: 1;
+  }
+
+  @media (max-width: 1024px) {
+    flex: none !important;
+    height: 180px;
+    font-size: 1.125rem;
+    border-radius: 0.5rem;
+  }
+
+  @media (max-width: 780px) {
+    height: 160px;
+  }
+
+  @media (max-width: 460px) {
+    height: 140px;
+    font-size: 1rem;
+    padding: 0.75rem;
   }
 }

@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 import styles from './page.module.scss';
 
 const ParoquiaEvolved = [
-  { nome: 'Paróquia 1', imagem: 'paroquia/paroquia-1.png' },
-  { nome: 'Paróquia 2', imagem: 'paroquia/paroquia-5.png' },
-  { nome: 'Paróquia 5', imagem: 'paroquia/paroquia-2.jpeg' },
-  { nome: 'Paróquia 4', imagem: 'paroquia/paroquia-4.png' },
-  { nome: 'Paróquia 3', imagem: 'paroquia/paroquia-3.png' }
+  { imagem: 'paroquia/paroquia-1.png' },
+  { imagem: 'paroquia/paroquia-5.png' },
+  { imagem: 'paroquia/paroquia-4.png' },
+  { imagem: 'paroquia/paroquia-2.jpeg' },
+  { imagem: 'paroquia/paroquia-3.png' },
+  { imagem: 'paroquia/paroquia-3.png' }
 ];
 
 export default function ParoquiaTimeline() {
