@@ -19,7 +19,7 @@ export const ObjectiveItem = ({ icon, title, description }: ObjectiveItemProps) 
     console.log("ObjectiveItem rendered with props:", { icon, title, description });
 
     return (
-        <div className={styles.objectivesItem__content}>
+        <div className={`${styles.objectivesItem__content} ${description ? styles.hasDescription : ''}`}>
             <div className={styles.objectivesItem__content__header}>
                 {icon && (
                     <div className={styles.objectivesItem__content__header__icon}>

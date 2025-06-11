@@ -1,18 +1,27 @@
 $transition-speed: 0.5s;
 
-.container {
+.timeline_container {
   display: flex;
   height: 400px;
   width: 100%;
   overflow: hidden;
+
+  @media (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    height: auto;
+    padding: 1rem;
+  }
 }
 
-.card {
+.timeline_container_card {
   position: relative;
   transition: all $transition-speed ease;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   padding: 1rem;
   color: white;
   font-weight: bold;
@@ -32,9 +41,20 @@ $transition-speed: 0.5s;
     flex: 1;
   }
 
-  .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 0.5rem 1rem;
+  @media (max-width: 1024px) {
+    flex: none !important;
+    height: 180px;
+    font-size: 1.125rem;
     border-radius: 0.5rem;
+  }
+
+  @media (max-width: 780px) {
+    height: 160px;
+  }
+
+  @media (max-width: 460px) {
+    height: 140px;
+    font-size: 1rem;
+    padding: 0.75rem;
   }
 }
