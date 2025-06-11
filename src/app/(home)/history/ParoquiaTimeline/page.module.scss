@@ -1,0 +1,40 @@
+$transition-speed: 0.5s;
+
+.container {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  transition: all $transition-speed ease;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  background-size: cover;
+  background-position: center;
+
+  &.default {
+    flex: 2;
+  }
+
+  &.expanded {
+    flex: 5;
+  }
+
+  &.collapsed {
+    flex: 1;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+}

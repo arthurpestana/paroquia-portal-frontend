@@ -7,6 +7,7 @@ import { HomeAbout } from '../home/_ui/HomeAbout';
 import { HomeObjectives } from '../home/_ui/HomeObjectives';
 import aboutUs from '@/lib/data/history/HistoryAbout.json'
 import { SlideComponent } from '@/components/comp/SlideComponent';
+import ParoquiaTimeline from './ParoquiaTimeline';
 
 export default function HistoryPage() {
     return (
@@ -18,6 +19,7 @@ export default function HistoryPage() {
                 <HomeAbout subtitle='Quem nós somos' title='Conheça nossa história' description={aboutUs.aboutUs}/>
                 <HomeObjectives title='Pastorais'/>
                 <SlideComponent/>
+                <ParoquiaTimeline/>
             </MainContent>
             <FooterContent/>
         </div>

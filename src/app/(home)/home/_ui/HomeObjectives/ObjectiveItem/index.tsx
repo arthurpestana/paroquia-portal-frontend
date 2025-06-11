@@ -28,7 +28,7 @@ export const ObjectiveItem = ({ icon, title, description }: ObjectiveItemProps) 
                 )}
             </div>
             <div className={styles.objectivesItem__content__content}>
-                <h4>{title}</h4>
+                <h5>{title}</h5>
                 <span>{description}</span>
             </div>
         </div>

@@ -40,7 +40,7 @@ export const SlideComponent =() => {
                         <p><span>Data de Nascimento:</span> {res.nascimento}</p>
                         <p><span>Ordenação:</span> {res.ordenacao.tipo}</p>
                         <p><span>Data da Ordenação:</span> {res.ordenacao.data}</p>
-                        <p><span>Função:</span> {res.funcoes.map(f => f)}</p>
+                        <p><span>Função:</span> {res.funcoes.map(f => ' | ' + f + ' | ')}</p>
                     </div>
                 </SwiperSlide>
             ))}
