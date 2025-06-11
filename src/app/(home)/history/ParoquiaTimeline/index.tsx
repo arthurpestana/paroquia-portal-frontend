@@ -15,7 +15,7 @@ export default function ParoquiaTimeline() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.timeline_container}>
       {ParoquiaEvolved.map((paroquia, index) => {
         const isHovered = hoveredIndex === index;
         const cardClass =
@@ -28,7 +28,7 @@ export default function ParoquiaTimeline() {
         return (
           <div
             key={index}
-            className={`${styles.card} ${cardClass}`}
+            className={`${styles.timeline_container_card} ${cardClass}`}
             style={{ backgroundImage: `url(/images/${paroquia.imagem})` }}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}

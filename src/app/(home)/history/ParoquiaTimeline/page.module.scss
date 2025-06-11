@@ -1,13 +1,13 @@
 $transition-speed: 0.5s;
 
-.container {
+.timeline_container {
   display: flex;
   height: 400px;
   width: 100%;
   overflow: hidden;
 }
 
-.card {
+.timeline_container_card {
   position: relative;
   transition: all $transition-speed ease;
   overflow: hidden;
@@ -30,11 +30,5 @@ $transition-speed: 0.5s;
 
   &.collapsed {
     flex: 1;
-  }
-
-  .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
   }
 }
