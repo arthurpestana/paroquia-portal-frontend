@@ -1,0 +1,42 @@
+[
+  {
+    "image": "/images/freis/frei-lucas-pires.png",
+    "nome": "Frei Lucas Pires",
+    "nascimento": "1992-08-17",
+    "ordenacao": {
+      "tipo": "Presbiteral",
+      "data": "2023-04-16"
+    },
+    "funcoes": ["Vigário Religioso", "Carmelita"]
+  },
+  {
+    "image": "/images/freis/frei-fernando-bezerra.png",
+    "nome": "Frei Fernando Bezerra Leite, O. Carm.",
+    "nascimento": "1973-09-06",
+    "ordenacao": {
+      "tipo": "Presbiteral",
+      "data": null
+    },
+    "funcoes": ["Pároco Religioso"]
+  },
+  {
+    "image": "/images/freis/diac-jose-oliveira.png",
+    "nome": "Diác. José Oliveira Brandão",
+    "nascimento": "1966-11-01",
+    "ordenacao": {
+      "tipo": "Diaconal Permanente",
+      "data": "2021-11-27"
+    },
+    "funcoes": ["Diácono Permanente", "Diaconia Bom Samaritano (Saúde)"]
+  },
+  {
+    "image": "/images/freis/frei-felisberto.png",
+    "nome": "Frei Felisberto Caldeira de Oliveira (Carmelita)",
+    "nascimento": "1937-03-27",
+    "ordenacao": {
+      "tipo": "Presbiteral",
+      "data": "1964-08-14"
+    },
+    "funcoes": ["Vigário Religioso", "Carmelita"]
+  }
+]
