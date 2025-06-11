@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ListContent.module.scss';
-import { ListRow } from '../ListRow';
 import { ColumnType } from '@/lib/types/ColumnType';
+import { ListRow } from '../ListRow';
 
 type ListContentProps = {
     index: number;

@@ -108,7 +108,7 @@ export const BannerList = () => {
                                 {
                                     header: 'Ordem',
                                     data: (
-                                        <ListText text={banner.order || 'N/A'} />
+                                        <ListText text={banner.order || 0} />
                                     ),
                                 },
                                 {

@@ -76,6 +76,7 @@ export type PriestRequest = {
     name: string
     origin: string
     isActive?: boolean
+    function: string[]
     image?: string
     order?: number
 }

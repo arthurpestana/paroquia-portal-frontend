@@ -90,6 +90,7 @@ export type PriestResponse = {
     name: string
     origin: string
     isActive: boolean
+    function: string[]
     image?: ImageResponse
     order: number
     createdAt: number

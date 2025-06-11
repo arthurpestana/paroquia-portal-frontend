@@ -29,14 +29,19 @@ export const NavBarSide = () => {
                     </Link>
                 </div>
                 <div className={styles.navBar__content__nav__items}>
-                    {navbarItemsSide.map((item, index) => (
-                        <NavItemsSide
-                            key={index}
-                            href={item.href}
-                            label={item.label}
-                            icon={item.icon}
-                        />
-                    ))}
+                    {navbarItemsSide.map((item, index) => {
+                        const isActive = item.href === window.location.pathname;
+
+                        return (
+                            <NavItemsSide
+                                key={index}
+                                href={item.href}
+                                label={item.label}
+                                icon={item.icon}
+                                active={isActive}
+                            />
+                        )
+                    })}
                 </div>
                 <div className={styles.navBar__content__nav__footer}>
                     <NavItemsSide

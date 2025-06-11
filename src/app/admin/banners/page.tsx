@@ -40,13 +40,18 @@ export default function BannersPage() {
                         searchValue={searchValue}
                         setSearchValue={setSearchValue}
                         handleFilters={handleFilters}
-                        handleAddClick={() => { }}
+                        handleAddClick={() => {
+                            const params = new URLSearchParams(searchParams);
+                            params.set('sub', 'add');
+                            router.push(`?${params.toString()}`);
+                        }}
                     />
                     <BannerList/>
                 </div>
             </div>
             {sub && (
-                <BannerForm 
+                <BannerForm
+                    key={sub+id}
                     id={id}
                     onClose={() => {
                         const params = new URLSearchParams(searchParams);

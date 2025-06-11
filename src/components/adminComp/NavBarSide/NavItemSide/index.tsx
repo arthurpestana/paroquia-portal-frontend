@@ -11,9 +11,10 @@ type NavItemSideProps = {
     label: string;
     onClick?: () => void;
     icon?: string | React.ReactNode;
+    active?: boolean;
 };
 
-export const NavItemsSide = ({ href, label, onClick, icon }: NavItemSideProps) => {
+export const NavItemsSide = ({ href, label, onClick, icon, active }: NavItemSideProps) => {
     const IconComponent = icon && typeof icon === "string" && (Icons as any)[icon];
     const router = useRouter();
 
@@ -28,7 +29,7 @@ export const NavItemsSide = ({ href, label, onClick, icon }: NavItemSideProps) =
 
     return (
         <div
-            className={`${styles.navItem__content}`}
+            className={`${styles.navItem__content} ${active ? styles.active : ''}`}
             onClick={handleClick}
         >
             {IconComponent && (
