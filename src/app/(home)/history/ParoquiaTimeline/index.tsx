@@ -8,7 +8,7 @@ const ParoquiaEvolved = [
   { imagem: 'paroquia/paroquia-4.png' },
   { imagem: 'paroquia/paroquia-2.jpeg' },
   { imagem: 'paroquia/paroquia-3.png' },
-  { imagem: 'paroquia/paroquia-3.png' }
+  { imagem: 'paroquia/paroquia-6.png' }
 ];
 
 export default function ParoquiaTimeline() {
