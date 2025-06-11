@@ -1,0 +1,109 @@
+@use '../../../../styles/variables.scss' as *;
+
+.popup__section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+    width: 80vw;
+    position: relative;
+}
+
+.popup__section__close {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.popup__section__header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    h1 {
+        color: $text-primary;
+        font-size: 24px;
+    }
+
+    p {
+        color: $gray-100;
+        font-size: 16px;
+    }
+
+    &.close {
+        max-width: 90%;
+    }
+}
+
+.popup__section__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    p {
+        color: $text-primary;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 4px 0px;
+    }
+}
+
+.popup__section__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 32px;
+
+    button {
+        padding: 12px 24px;
+        border-radius: 8px;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    button:nth-child(2) {
+
+        span {
+            color: $red-100;
+        }
+
+        &:hover {
+            background-color: $red-100;
+
+            span {
+                color: $white-100;
+            }
+        }
+    }
+
+    button:nth-child(1) {
+        opacity: 0.8;
+        cursor: pointer;
+
+        span {
+            color: $text-primary;
+        }
+    }
+}
+
+.confirmButtons {
+    button:nth-child(2) {
+        border: 2px solid $green-100;
+        cursor: pointer;
+
+        span {
+            color: $green-100;
+        }
+
+        &:hover {
+            background-color: $green-100;
+            border: 2px solid $green-100;
+
+            span {
+                color: $white-100;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@use '../../../styles/variables.scss' as *;
+
+.titlePage__section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h1 {
+        font-size: 32px;
+        font-weight: 600;
+        color: $text-primary;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        color: $gray-100;
+        line-height: 1.5;
+    }
+}

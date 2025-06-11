@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './HomeEvents.module.scss';
 import { SectionTitle } from '@/components/comp/SectionTitle';
-import { useNextEvents } from '@/hooks/useNextEvents';
 import { SliderCards } from '@/components/comp/SliderCards';
 import { EventCard } from './EventCard';
+import { useActiveEvents } from '@/hooks/useActiveEvents';
 
 export const HomeEvents = () => {
-    const { events, loading, error } = useNextEvents()
+    const { events, loading, error } = useActiveEvents()
     console.log(events, loading, error);
 
     return (

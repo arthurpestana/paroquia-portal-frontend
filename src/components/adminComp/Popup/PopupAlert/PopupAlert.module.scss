@@ -1,0 +1,72 @@
+@use '../../../../styles/variables.scss' as *;
+
+.popup__section__header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h1 {
+        color: $text-primary;
+        font-size: 24px;
+    }
+
+    p {
+        color: $gray-100;
+        font-size: 16px;
+    }
+}
+
+.popup__section__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    p {
+        color: $text-primary;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 4px 0px;
+    }
+}
+
+.popup__section__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 32px;
+
+    button {
+        padding: 12px 24px;
+        border-radius: 8px;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    button:nth-child(2) {
+        border: 2px solid $red-100;
+
+        span {
+            color: $red-100;
+        }
+
+        &:hover {
+            background-color: $red-100;
+            border: 2px solid $red-100;
+
+            span {
+                color: $white-100;
+            }
+        }
+    }
+
+    button:nth-child(1) {
+        opacity: 0.8;
+        border: 2px solid $gray-100;
+        cursor: pointer;
+
+        span {
+            color: $text-primary;
+        }
+    }
+}

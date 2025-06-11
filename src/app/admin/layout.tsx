@@ -1,8 +1,12 @@
 'use client';
 
+import { NavBarSide } from "@/components/adminComp/NavBarSide";
+import { MainContent } from "@/components/structure/MainContent";
 import { hasToken, isAdminToken, isTokenExpired } from "@/lib/utils/auth";
 import { useRouter } from "next/navigation";
 import { ReactNode, useEffect, useState } from "react";
+import styles from './styles.module.scss'
+import { LoadingComp } from "@/components/comp/LoadingComp";
 
 export default function AdminLayout({ children }: { children: ReactNode }) {
   const router = useRouter();
@@ -18,16 +22,19 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
   }, []);
 
   if (isAuthorized === null) {
-    return null; 
-  }
-
-  if (!isAuthorized) {
     return null;
   }
 
+  if (!isAuthorized) {
+    return <LoadingComp/>
+  }
+
   return (
-    <div>
+    <div className={styles.admin__layout}>
+      <NavBarSide/>
+      <MainContent>
         {children}
+      </MainContent>
     </div>
   )
 }

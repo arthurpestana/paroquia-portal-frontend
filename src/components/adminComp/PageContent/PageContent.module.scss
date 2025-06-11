@@ -1,0 +1,10 @@
+@use '../../../styles/variables.scss' as *;
+
+.page__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 64px;
+    background-color: $background-primary;
+}

@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react'
 import { getActiveBanners } from '@/lib/apiServices/Queries'
-import { BannerResponse } from '@/lib/types/QueriesTypes'
+import { BannerCountResponse } from '@/lib/types/QueriesTypes'
 import { GetAllParamsType } from '@/lib/types/QueryParamsType'
 
 export const useActiveBanners = (params?: GetAllParamsType) => {
-  const [banners, setBanners] = useState<BannerResponse[]>([])
+  const [banners, setBanners] = useState<BannerCountResponse>()
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
 

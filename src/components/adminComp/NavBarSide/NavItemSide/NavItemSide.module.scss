@@ -1,0 +1,106 @@
+@use "../../../../styles/variables.scss" as *;
+
+.navItem__content {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: ease-in-out 0.2s;
+    gap: 8px;
+
+    &:hover {
+        background-color: $foreground-secondary;
+    }
+
+    .navItem__content__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 18px;
+            height: 18px;
+            color: $text-primary;
+        }
+    }
+
+    .navItem__content__text {
+        font-size: 16px;
+        font-weight: 400;
+        color: $text-primary;
+    }
+
+    &.active {
+        position: relative;
+        background-color: $foreground-primary;
+
+        &:hover {
+            background-color: darken($foreground-secondary, 10%);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 8px;
+            background-color: $background-secondary;
+            animation: both slideBorder 0.2s;
+            transition: all ease-in-out 0.2s;
+        }
+
+        @keyframes slideBorder {
+            0% {
+                width: 0px;
+            }
+
+            100% {
+                width: 4px;
+            }
+        }
+    }
+
+    &.logout {
+        span {
+            color: $red-100;
+        }
+
+        .navItem__content__icon {
+            svg {
+                color: $red-100;
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .navItem__content {
+        justify-content: center;
+
+        .navItem__content__text {
+            display: none;
+        }
+
+        .navItem__content__icon {
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navItem__content {
+        justify-content: flex-start;
+        padding: 12px 16px;
+        gap: 8px;
+
+        .navItem__content__text {
+            display: block;
+        }
+    }
+}

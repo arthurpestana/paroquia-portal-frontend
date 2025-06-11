@@ -1,0 +1,142 @@
+@use "../../../styles/variables.scss" as *;
+
+.navBar__content {
+    display: flex;
+    position: sticky;
+    min-width: 300px;
+    width: 300px;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    flex-direction: column;
+    transition: ease-in-out 0.2s;
+    padding: 32px 16px;
+    background-color: $background-primary;
+    border-right: 1px solid $light-100;
+    z-index: 1000;
+
+    .navBar__content__nav {
+        position: sticky;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        gap: 16px;
+        position: relative;
+
+        .navBar__content__nav__header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            .navBar__content__nav__header__logo {
+                cursor: pointer;
+                position: relative;
+                width: 100%;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    margin: auto;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .navBar__content__nav__items {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            width: 100%;
+            gap: 12px;
+        }
+
+        .navBar__content__nav__footer {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .navBar__content {
+        min-height: 100vh;
+        z-index: 1000;
+        min-width: 100px;
+        width: 100px;
+
+        .navBar__content__nav {
+            .navBar__content__nav__header {
+                margin-bottom: 0px;
+            }
+
+            .navBar__content__nav__header__logo {
+                width: 64px;
+                height: 64px;
+                background-image: url('/images/paroquia-logo.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navBar__content {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        border: none;
+        background: none;
+        width: 100vw;
+        min-height: 100vh;
+        padding: 0px;
+
+        .navBar__content__burguer {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            display: flex;
+            z-index: 1000;
+
+            & > div > span {
+                background-color: $foreground-primary !important;
+            }
+        }
+
+        .navBar__content__nav {
+            position: relative;
+            left: 0;
+            top: -200%;
+            background-color: $background-primary;
+            z-index: 999;
+            height: 100vh;
+            width: 100%;
+            transition: ease-in-out 0.1s;
+            padding: 64px;
+        }
+
+        &.active__burguer {
+            left: 0;
+
+            .navBar__content__nav {
+                top: 0;
+            }
+        }
+    }
+}

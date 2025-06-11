@@ -95,3 +95,43 @@ export type PriestResponse = {
     createdAt: number
     updatedAt: number
 }
+
+export type UserCountResponse = {
+  totalCount: number;
+  users: UserResponse[];
+};
+
+export type BannerCountResponse = {
+  totalCount: number;
+  banners: BannerResponse[];
+};
+
+export type ContactCountResponse = {
+  totalCount: number;
+  contacts: ContactResponse[];
+};
+
+export type EventCountResponse = {
+  totalCount: number;
+  events: EventResponse[];
+};
+
+export type MassTimeCountResponse = {
+  totalCount: number;
+  massTimes: MassTimeResponse[];
+};
+
+export type PastoralCountResponse = {
+  totalCount: number;
+  pastorals: PastoralResponse[];
+};
+
+export type PriestCountResponse = {
+  totalCount: number;
+  priests: PriestResponse[];
+};
+
+export type ImageCountResponse = {
+  totalCount: number;
+  images: ImageResponse[];
+};

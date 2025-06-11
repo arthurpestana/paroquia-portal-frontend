@@ -1,0 +1,42 @@
+[
+  {
+    "label": "Banners",
+    "href": "/banners",
+    "icon": "PhotoLibraryOutlined"
+  },
+  {
+    "label": "Usuários",
+    "href": "/users",
+    "icon": "PeopleAltOutlined"
+  },
+  {
+    "label": "Eventos",
+    "href": "/mentorings",
+    "icon": "EventOutlined"
+  },
+  {
+    "label": "Missas",
+    "href": "/massTimes",
+    "icon": "ChurchOutlined"
+  },
+  {
+    "label": "Pastoriais",
+    "href": "/pastorals",
+    "icon": "VolunteerActivismOutlined"
+  },
+  {
+    "label": "Fréis",
+    "href": "/priests",
+    "icon": "PersonOutlined"
+  },
+  {
+    "label": "Imagens",
+    "href": "/images",
+    "icon": "ImageOutlined"
+  },
+  {
+    "label": "Contatos",
+    "href": "/contacts",
+    "icon": "ContactMailOutlined"
+  }
+]

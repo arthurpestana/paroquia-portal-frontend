@@ -1,0 +1,29 @@
+@use '../../../styles/variables.scss' as *;
+
+.noContent__section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 16px;
+    position: relative;
+    border: 2px solid $background-primary;
+    padding: 32px;
+
+    p {
+        font-size: 18px;
+        font-weight: 500;
+        color: $gray-80;
+        text-align: center;
+    }
+
+    &.mini {
+        padding: 16px;
+        border-radius: 8px;
+        border: none;
+
+        p {
+            font-size: 14px;
+        }
+    }
+}

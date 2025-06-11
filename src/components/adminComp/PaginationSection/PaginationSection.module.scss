@@ -1,0 +1,39 @@
+@use '../../../styles/variables.scss' as *;
+
+.pagination__section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+
+    .pagination__section__index {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 24px;
+        height: 24px;
+
+        span {
+            color: $text-primary;
+            transition: ease-in-out 0.1s;
+            padding: 4px;
+        }
+
+        span:hover {
+            color: darken($text-primary, 10%);
+            transform: scale(1.1);
+        }
+
+        &.active {
+            background-color: $background-secondary;
+            border-radius: 4px;
+
+            span {
+                color: $light-100;
+            }
+        }
+    }
+}

@@ -9,6 +9,7 @@ import { NavItemType } from "@/lib/types/NavItemType";
 import navbarItems from "@/lib/data/navbarItems.json";
 import { Button } from "@/components/comp/Button";
 import { useRouter } from 'next/navigation';
+import { NavBurguer } from '../NavBurguer';
 
 export const NavBar = () => {
   const router = useRouter();
@@ -56,11 +57,7 @@ export const NavBar = () => {
         })}
       </div>
 
-      <div className={`${styles.navBar__content__burger} ${isOpenNav && styles.active}`} onClick={() => setIsOpenNav(!isOpenNav)} >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <NavBurguer setIsOpenNav={setIsOpenNav} isOpenNav={isOpenNav}/>
     </nav>
   );
 };

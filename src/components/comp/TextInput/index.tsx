@@ -16,6 +16,8 @@ type TextInputProps = {
   disabled?: boolean;
   variant?: 'outlined' | 'floating';
   darkMode?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
 };
 
 export const TextInput = ({
@@ -29,6 +31,8 @@ export const TextInput = ({
   disabled = false,
   variant = 'outlined',
   darkMode = false,
+  className = '',
+  style = {},
 }: TextInputProps) => {
   const [isFocused, setIsFocused] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -44,7 +48,7 @@ export const TextInput = ({
   const showFloatingLabel = variant === 'floating' && (isFocused || value);
 
   return (
-    <div className={`${styles.textInput__content} ${variantClass} ${darkClass}`}>
+    <div className={`${styles.textInput__content} ${variantClass} ${darkClass} ${className}`} style={style}>
       {variant === 'outlined' && label && (
         <label htmlFor={name} className={styles.textInput__content__label}>
           {label}

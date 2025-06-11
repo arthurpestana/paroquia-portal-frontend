@@ -7,11 +7,17 @@
     align-items: center;
     justify-content: center;
     transition: ease-in-out 0.2s;
+    gap: 6px;
 
     span {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
     }
 }
 
@@ -154,21 +160,21 @@
 @media screen and (max-width: 1040px) {
     .button__content__text {
         span {
-            font-size: 0.9rem;
+            font-size: 14px;
         }
     }
 
     .button__content__outlined {
         padding: 10px 42px;
         span {
-            font-size: 0.9rem;
+            font-size: 14px;
         }
     }
 
     .button__content__contained {
         padding: 10px 42px;
         span {
-            font-size: 0.9rem;
+            font-size: 14px;
         }
     }
     

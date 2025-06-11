@@ -3,8 +3,12 @@ import { Button } from "@/components/comp/Button";
 import { SectionTitle } from "@/components/comp/SectionTitle";
 import Image from "next/image";
 import { AccessTimeOutlined, FmdGoodOutlined } from '@mui/icons-material';
+import { useActiveMassTimes } from '@/hooks/useActiveMassTimes';
 
 export const HomeSchedule = () => {
+    const { massTimes, loading, error } = useActiveMassTimes();
+    console.log(massTimes, loading, error);
+
     return (
         <div className={style.homeSchedule__content} id="masses">
             <SectionTitle

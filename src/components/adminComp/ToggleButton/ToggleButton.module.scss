@@ -1,0 +1,54 @@
+@use '../../../styles/variables.scss' as *;
+
+.toggleButton__section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+
+    .toggleButton__label {
+        font-size: 16px;
+        color: $white-100;
+        font-weight: 500;
+    }
+
+    .toggleButton__section__input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .toggleButton__section__button {
+        display: flex;
+        align-items: center;
+        width: 50px;
+        height: inherit;
+        border-radius: 32px;
+        padding: 4px;
+        background-color: $gray-80;
+        cursor: pointer;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        transition: ease-in-out 0.2s;
+
+        .toggleButton__section__button__circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $white-100;
+            transition: ease-in-out 0.2s;
+        }
+        
+        &.active {
+            background-color: $green-100;
+
+            .toggleButton__section__button__circle {
+                transform: translateX(22px);
+            }
+        }
+    }
+}
