@@ -19,14 +19,16 @@ export const BannerSlider = ({ style, children }: BannerSliderProps) => {
     console.log('banners', banners, loading, error)
 
     useEffect(() => {
+        if (!banners?.banners || banners.banners.length === 0) return;
+
         const interval = setInterval(() => {
-            setCurrentBanner(prev => (prev + 1) % banners.length)
-        }, 7000)
+            setCurrentBanner(prev => (prev + 1) % banners.banners.length);
+        }, 7000);
 
-        return () => clearInterval(interval)
-    }, [banners])
+        return () => clearInterval(interval);
+    }, [banners]);
 
-    const banner = banners[currentBanner]
+    const banner = banners?.banners[currentBanner]
 
     const selectBanner = (index: number) => setCurrentBanner(index)
 
@@ -57,16 +59,16 @@ export const BannerSlider = ({ style, children }: BannerSliderProps) => {
                             darkMode={false}
                             onClick={() => {
                                 if (banner?.buttonInfo?.link?.includes('http')) {
-                                    window.open(banner.buttonInfo.link, '_blank', 'noreferrer noopener')
+                                    window.open(banner?.buttonInfo.link, '_blank', 'noreferrer noopener')
                                     return
                                 }
-                                router.push(banner.buttonInfo.link)
+                                router.push(banner?.buttonInfo.link || '/')
                             }}
                         />
                     </div>
                 </div>
                 <BannerSliderControls
-                    total={banners?.length}
+                    total={banners?.totalCount || 0}
                     currentBanner={currentBanner}
                     onSelect={selectBanner}
                 />
