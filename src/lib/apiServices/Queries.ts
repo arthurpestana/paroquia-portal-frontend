@@ -1,7 +1,12 @@
 import api from '@/services/api'
-import { BannerCountResponse, EventCountResponse, MassTimeCountResponse, PastoralCountResponse, PriestCountResponse } from '../types/QueriesTypes';
+import { BannerCountResponse, BannerResponse, EventCountResponse, MassTimeCountResponse, PastoralCountResponse, PriestCountResponse } from '../types/QueriesTypes';
 import { GetAllParamsType } from '../types/QueryParamsType';
 import { QueryStringfy } from '../utils/stringUtils';
+
+export const getBannerById = async (id: string): Promise<BannerResponse> => {
+    const response = await api.get(`/banners/${id}`);
+    return response.data;
+}
 
 export const getBanners = async (params?: GetAllParamsType): Promise<BannerCountResponse> => {
     const query = QueryStringfy(params || {});

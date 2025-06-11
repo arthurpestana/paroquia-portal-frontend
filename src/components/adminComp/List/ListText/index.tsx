@@ -7,7 +7,7 @@ type ListTextProps = {
     maxLength?: number;
 }
 
-export const ListText = ({ text, icon, maxLength = 60 }: ListTextProps) => {
+export const ListText = ({ text, icon, maxLength = 40 }: ListTextProps) => {
     const truncatedText = text && typeof text === "string" && text.length > maxLength ? `${text.slice(0, maxLength)}...` : text;
 
     return (

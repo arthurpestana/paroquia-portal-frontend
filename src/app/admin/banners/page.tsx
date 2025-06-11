@@ -6,11 +6,15 @@ import { PageContent } from '@/components/adminComp/PageContent';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { FiltersSection } from '@/components/adminComp/FiltersSection';
 import { BannerList } from './_ui/BannerList';
+import { BannerForm } from './_ui/BannerForm';
 
 export default function BannersPage() {
     const searchParams = useSearchParams();
     const router = useRouter();
     const [searchValue, setSearchValue] = useState('');
+
+    const sub = searchParams.get('sub') || '';
+    const id = searchParams.get('id') || '';
 
     useEffect(() => {
         const currentSearch = searchParams.get('search') || '';
@@ -38,11 +42,20 @@ export default function BannersPage() {
                         handleFilters={handleFilters}
                         handleAddClick={() => { }}
                     />
-                    <div className={styles.banners__content__body__list}>
-                        <BannerList/>
-                    </div>
+                    <BannerList/>
                 </div>
             </div>
+            {sub && (
+                <BannerForm 
+                    id={id}
+                    onClose={() => {
+                        const params = new URLSearchParams(searchParams);
+                        params.delete('id');
+                        params.delete('sub');
+                        router.push(`?${params.toString()}`);
+                    }}
+                />
+            )}
         </PageContent>
     );
 }

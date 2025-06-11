@@ -8,7 +8,7 @@ type PopupAlertProps = {
     description: string;
     message: string;
     isOpen: boolean;
-    setOpen: (open: boolean) => void;
+    setOpen: (open: boolean | string) => void;
     buttonLabel: string;
     onSubmit: () => void;
 }
