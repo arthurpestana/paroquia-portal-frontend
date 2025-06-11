@@ -7,7 +7,7 @@ import { showToast, showToastPromise } from '@/lib/utils/showToast';
 import React, { useEffect, useState } from 'react';
 import { Textarea } from '@/components/adminComp/Textarea';
 import { FileUpload } from '@/components/adminComp/FileUpload';
-import { useImageById } from '@/hooks/useImageByid';
+import { useImageById } from '@/hooks/useImageById';
 
 type ImageFormProps = {
     id?: string;
